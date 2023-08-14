@@ -3,6 +3,9 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const GITHUB_LINK = "https://github.com/NOXITB";
+const YOUTUBE_LINK = "https://www.youtube.com/channel/UCbAf_psqFnOUVQ-CdyXnwXg";
 ---
 
 <!DOCTYPE html>
@@ -13,159 +16,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <section class="hero">
-        <h1 class="hero-title">
-          Welcome to <span class="highlight">NoxCoding</span>
-        </h1>
-        <p class="hero-description">
-          Unlock the World of Tech and Coding with NoxCoding
-        </p>
-        <a
-          class="hero-button"
-          href="https://www.youtube.com/channel/UCbAf_psqFnOUVQ-CdyXnwXg"
-          target="_blank"
-          rel="noopener noreferrer">Subscribe on YouTube</a
-        >
-      </section>
-      <section class="about">
-        <h2>About NoxCoding</h2>
-        <p>
-          Hey there, coding enthusiasts! I'm NoxCoding, your guide to the
-          fascinating universe of technology and programming. On my YouTube
-          channel, I'm dedicated to bringing you engaging content that
-          simplifies complex coding concepts, explores the latest tech trends,
-          and showcases real-world coding applications.
-        </p>
-        <p>
-          If you're passionate about coding or eager to kickstart your tech
-          journey, you're in the right place. Join me in unraveling the magic of
-          coding, step by step.
-        </p>
-      </section>
-      <section class="highlights">
-        <h2>What You'll Find Here</h2>
-        <ul>
-          <li>
-            🔥 In-depth coding tutorials for beginners and advanced developers
-          </li>
-          <li>
-            🚀 Explorations of cutting-edge technologies and programming
-            languages
-          </li>
-          <li>
-            💡 Tips, tricks, and best practices to enhance your coding skills
-          </li>
-          <li>
-            📚 Insights into the world of open source and collaborative coding
-          </li>
-        </ul>
-        <p>
-          Whether you're a curious coder or a tech aficionado, there's something
-          exciting waiting for you. Let's dive into the world of coding
-          together!
-        </p>
-      </section>
-      <section class="connect">
-        <h2>Connect with NoxCoding</h2>
-        <p>
-          Stay updated with the latest tech trends, coding challenges, and
-          insightful discussions by subscribing to my YouTube channel. Feel free
-          to explore my <a
-            href="https://github.com/NOXITB"
-            target="_blank"
-            rel="noopener noreferrer">GitHub</a
-          > repository, where I share open-source projects and collaborate with the
-          coding community.
-        </p>
-        <p>
-          Join me on this coding adventure, and let's unleash the power of
-          innovation and creativity!
-        </p>
-      </section>
+      <h1>👋 Hello, I'm Blake!</h1>
+      <p>
+        Welcome to my personal website! This is where I share my projects,
+        thoughts, and experiences. Feel free to explore and learn more about me.
+      </p>
+      <p>
+        You can find my coding projects on my <a href={GITHUB_LINK}>GitHub</a> page.
+        I enjoy working on various programming challenges and contributing to open-source
+        projects.
+      </p>
+      <p>
+        I also have a <a href={YOUTUBE_LINK}>YouTube</a> channel where I share tutorials,
+        demos, and insights related to technology and coding. Don't forget to subscribe
+        if you're interested!
+      </p>
+      <p>Here are a few things you can do on my website:</p>
+      <ul>
+        <li>
+          Explore my coding projects on my <a href={GITHUB_LINK}>GitHub</a> page.
+        </li>
+        <li>Watch videos on my <a href={YOUTUBE_LINK}>YouTube</a> channel.</li>
+        <li>Read my blog posts and thoughts on various topics.</li>
+        <li>Get in touch with me through the contact form.</li>
+      </ul>
+      <p>
+        If you have any questions or want to collaborate, feel free to reach out
+        to me through my GitHub or YouTube channels. Let's connect and learn
+        together!
+      </p>
     </main>
     <Footer />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #333;
-      }
-
-      /* Add your own styling here */
-      .hero {
-        background-color: #007bff;
-        color: white;
-        padding: 2rem;
-        text-align: center;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .highlight {
-        /* Removed color property for the highlight class */
-      }
-
-      .hero-description {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-      }
-
-      .hero-button {
-        display: inline-block;
-        padding: 0.5rem 1.5rem;
-        border: none;
-        /* Removed background-color property for the hero-button class */
-        color: #007bff;
-        font-size: 1rem;
-        text-decoration: none;
-        border-radius: 0.3rem;
-        transition: background-color 0.3s ease;
-      }
-
-      .hero-button:hover {
-        /* Removed background-color property for the hero-button:hover class */
-        color: #007bff;
-      }
-
-      /* Add styling for other sections as needed */
-      .about,
-      .highlights,
-      .connect {
-        margin: 4rem auto;
-        padding: 2rem;
-        max-width: 800px;
-        background-color: #f5f5f5;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      ul {
-        list-style: disc;
-        padding-left: 2rem;
-      }
-
-      p {
-        line-height: 1.6;
-      }
-
-      a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
   </body>
 </html>
