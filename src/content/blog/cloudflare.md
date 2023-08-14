@@ -100,8 +100,3 @@ async function handleRequest(request) {
 Cloudflare Pages and Workers provide powerful tools for deploying websites and building serverless APIs. Whether you're a developer looking for efficient hosting or aiming to optimize your web performance, Cloudflare's services offer a seamless solution.
 
 For more advanced features and customization options, explore Cloudflare's documentation and resources.
-
-```
-
-As with the previous guide, make sure to replace the placeholder images and details with actual content and relevant information. Feel free to expand and customize the guide based on your specific use case or target audience.
-```
