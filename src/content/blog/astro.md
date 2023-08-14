@@ -1,8 +1,8 @@
 ---
 title: "Introduction to Astro Programming Language"
 description: "A guide to the modern web framework"
-publishDate: "Aug 15 2023"
-heroImage: "/blog/astro.jpg"
+pubDate: "Aug 15 2023"
+heroImage: "/astro.jpg"
 ---
 
 # Introduction to Astro Programming Language
@@ -37,9 +37,9 @@ Astro components are reusable pieces of UI that can include HTML, CSS, and even 
 </template>
 
 <style>
-.component {
-  color: #333;
-}
+  .component {
+    color: #333;
+  }
 </style>
 ```
 
@@ -49,7 +49,7 @@ Pages in Astro are like routes in traditional frameworks. You can define differe
 
 ```astro
 ---
-path: '/'
+path: "/";
 ---
 
 <template>
@@ -59,13 +59,13 @@ path: '/'
 </template>
 
 <script>
-import Component from '../components/Component.astro';
+  import Component from "../components/Component.astro";
 </script>
 
 <style>
-.page {
-  background-color: #f0f0f0;
-}
+  .page {
+    background-color: #f0f0f0;
+  }
 </style>
 ```
 
