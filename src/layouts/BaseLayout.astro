@@ -8,8 +8,10 @@ export interface Props {
   description: string;
   permalink: string;
   current?: string;
+  heroImage?: string; // Add heroImage property
 }
-const { title, description, permalink, current } = Astro.props;
+
+const { title, description, permalink, current, heroImage } = Astro.props;
 ---
 <html lang="en">
 <head>
@@ -20,6 +22,12 @@ const { title, description, permalink, current } = Astro.props;
     <Header current={current} />
 
     <main>
+      <h1>{title}</h1> {/* Display the title */}
+      
+      <div class="hero-image">
+        {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+      </div>
+
       <slot />
     </main>
 
@@ -46,5 +54,11 @@ const { title, description, permalink, current } = Astro.props;
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  .hero-image {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
   }
 </style>
