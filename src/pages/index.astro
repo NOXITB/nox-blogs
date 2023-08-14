@@ -1,10 +1,3 @@
----
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
----
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -84,87 +77,91 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       </section>
     </main>
     <Footer />
-  </body><style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #ddd; /* Darker text color */
+        background-color: #222; /* Dark background color */
+      }
 
-    /* Add your own styling here */
-    .hero {
-      background-color: #007bff;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+      /* Add your own styling here */
+      .hero {
+        background-color: #007bff;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
 
-    .hero-title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+      .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
 
-    .highlight {
-      color: #ffd700;
-    }
+      .highlight {
+        color: #ffd700;
+      }
 
-    .hero-description {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
+      .hero-description {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
 
-    .hero-button {
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      border: none;
-      background-color: #ffd700;
-      color: #007bff;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 0.3rem;
-      transition: background-color 0.3s ease;
-    }
+      .hero-button {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        border: none;
+        background-color: #ffd700;
+        color: #007bff;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 0.3rem;
+        transition: background-color 0.3s ease;
+      }
 
-    .hero-button:hover {
-      background-color: #ffd700;
-      color: #007bff;
-    }
+      .hero-button:hover {
+        background-color: #ffd700;
+        color: #007bff;
+      }
 
-    /* Add styling for other sections as needed */
-    .about,
-    .highlights,
-    .connect {
-      margin: 4rem auto;
-      padding: 2rem;
-      max-width: 800px;
-      background-color: #f5f5f5;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+      /* Add styling for other sections as needed */
+      .about,
+      .highlights,
+      .connect {
+        margin: 4rem auto;
+        padding: 2rem;
+        max-width: 800px;
+        background-color: #333; /* Darker section background color */
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #fff; /* White text color for section headers */
+      }
 
-    ul {
-      list-style: disc;
-      padding-left: 2rem;
-    }
+      ul {
+        list-style: disc;
+        padding-left: 2rem;
+      }
 
-    p {
-      line-height: 1.6;
-    }
+      p {
+        line-height: 1.6;
+        color: #ddd; /* Darker text color */
+      }
 
-    a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </body>
 </html>
