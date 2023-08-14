@@ -1,7 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
-import ThemeToggleButton from "./ThemeToggleButton.svelte";
 ---
 
 <header>
@@ -41,16 +40,13 @@ import ThemeToggleButton from "./ThemeToggleButton.svelte";
         >
       </a>
     </div>
-    <div class="theme-toggle">
-      <ThemeToggleButton />
-    </div>
   </nav>
 </header>
 <style>
   header {
     margin: 0;
     padding: 0 1em;
-    background: white;
+    background: black;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
   h2 {
