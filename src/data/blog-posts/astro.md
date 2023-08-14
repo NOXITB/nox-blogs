@@ -2,7 +2,7 @@
 title: "Introduction to Astro Programming Language"
 description: "A guide to the modern web framework"
 pubDate: "Aug 15 2023"
-heroImage: "/astro-programming.jpg"
+heroImage: "/astro.jpg"
 ---
 
 # Introduction to Astro Programming Language
