@@ -9,6 +9,49 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      body {
+        color: white;
+        background-color: #111827;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+      a:hover {
+        color: #6ee7b7;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      code {
+        background-color: #1d2d3f;
+        color: white;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
     <Header title={SITE_TITLE} />
