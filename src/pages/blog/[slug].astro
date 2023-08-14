@@ -21,9 +21,7 @@ const permalink = `${Astro.site.href}blog/${slug}`;
   <header>
     <p>{publishDate} ~ {readingTime}</p>
     <h1>{title}</h1>
-    <div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-		</div>
+    <img width={720} height={360} src={post.data.heroImage} alt="" />
     <hr />
   </header>
   <div class="container">
