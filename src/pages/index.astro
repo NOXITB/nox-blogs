@@ -8,737 +8,164 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blake's Portfolio</title>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <h1 align="center">Hi 👋, I'm Blake</h1>
-    <h3 align="center">
-      I am an all round dev from Australia And I can code in lots of languages
-    </h3>
+    <Header title={SITE_TITLE} />
+    <main>
+      <section class="hero">
+        <h1 class="hero-title">
+          Welcome to <span class="highlight">NoxCoding</span>
+        </h1>
+        <p class="hero-description">
+          Unlock the World of Tech and Coding with NoxCoding
+        </p>
+        <a
+          class="hero-button"
+          href="https://www.youtube.com/channel/UCbAf_psqFnOUVQ-CdyXnwXg"
+          target="_blank"
+          rel="noopener noreferrer">Subscribe on YouTube</a
+        >
+      </section>
+      <section class="about">
+        <h2>About NoxCoding</h2>
+        <p>
+          Hey there, coding enthusiasts! I'm NoxCoding, your guide to the
+          fascinating universe of technology and programming. On my YouTube
+          channel, I'm dedicated to bringing you engaging content that
+          simplifies complex coding concepts, explores the latest tech trends,
+          and showcases real-world coding applications.
+        </p>
+        <p>
+          If you're passionate about coding or eager to kickstart your tech
+          journey, you're in the right place. Join me in unraveling the magic of
+          coding, step by step.
+        </p>
+      </section>
+      <section class="highlights">
+        <h2>What You'll Find Here</h2>
+        <ul>
+          <li>
+            🔥 In-depth coding tutorials for beginners and advanced developers
+          </li>
+          <li>
+            🚀 Explorations of cutting-edge technologies and programming
+            languages
+          </li>
+          <li>
+            💡 Tips, tricks, and best practices to enhance your coding skills
+          </li>
+          <li>
+            📚 Insights into the world of open source and collaborative coding
+          </li>
+        </ul>
+        <p>
+          Whether you're a curious coder or a tech aficionado, there's something
+          exciting waiting for you. Let's dive into the world of coding
+          together!
+        </p>
+      </section>
+      <section class="connect">
+        <h2>Connect with NoxCoding</h2>
+        <p>
+          Stay updated with the latest tech trends, coding challenges, and
+          insightful discussions by subscribing to my YouTube channel. Feel free
+          to explore my <a
+            href="https://github.com/NOXITB"
+            target="_blank"
+            rel="noopener noreferrer">GitHub</a
+          > repository, where I share open-source projects and collaborate with the
+          coding community.
+        </p>
+        <p>
+          Join me on this coding adventure, and let's unleash the power of
+          innovation and creativity!
+        </p>
+      </section>
+    </main>
+    <Footer />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
 
-    <p align="left">
-      <img
-        src="https://komarev.com/ghpvc/?username=noxitb&label=Profile%20views&color=0e75b6&style=flat"
-        alt="noxitb"
-      />
-    </p>
-    <p align="left">
-      <img
-        src="https://metrics.lecoq.io/NOXITB?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&config.timezone=Australia%2FBrisbane"
-      />
-    </p>
+      /* Add your own styling here */
+      .hero {
+        background-color: #007bff;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
 
-    <p>
-      🔭 I’m currently working on <a href="https://github.com/Rabbit-Company"
-        >Rabbit Company</a>
-    </p>
+      .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
 
-    <p>
-      📫 How to reach me: <a href="mailto:blake@jenkohome.com"
-        >blake@jenkohome.com</a>
-    </p>
+      .highlight {
+        /* Removed color property for the highlight class */
+      }
 
-    <h3 align="left">Connect with me:</h3>
-    <p align="left">
-      <a href="https://stackoverflow.com/users/15397125" target="blank"
-        ><img
-          align="center"
-          src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg"
-          alt="15397125"
-          height="30"
-          width="40"
-        /></a
-      >
-      <a
-        href="https://www.youtube.com/channel/ucbaf_psqfnouvq-cdyxnwxg"
-        target="blank"
-        ><img
-          align="center"
-          src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg"
-          alt="https://www.youtube.com/channel/ucbaf_psqfnouvq-cdyxnwxg"
-          height="30"
-          width="40"
-        /></a
-      >
-      <a href="https://discord.gg/RvW5UCEer3" target="blank"
-        ><img
-          align="center"
-          src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg"
-          alt="https://discord.gg/RvW5UCEer3"
-          height="30"
-          width="40"
-        /></a
-      >
-    </p>
+      .hero-description {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
 
-    <h3 align="left">Languages and Tools:</h3>
-    <p align="left">
-      <h3 align="left">Languages and Tools:</h3>
-      <p align="left">
-        <a
-          href="https://azure.microsoft.com/en-in/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"
-            alt="azure"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.gnu.org/software/bash/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg"
-            alt="bash"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.blender.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://download.blender.org/branding/community/blender_community_badge_white.svg"
-            alt="blender"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://canvasjs.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg"
-            alt="canvasjs"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://cassandra.apache.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://www.vectorlogo.zone/logos/apache_cassandra/apache_cassandra-icon.svg"
-            alt="cassandra"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.chartjs.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.chartjs.org/media/logo-title.svg"
-            alt="chartjs"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://circleci.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/circleci/circleci-icon.svg"
-            alt="circleci"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.cypress.io" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/simple-icons/simple-icons/6e46ec1fc23b60c8fd0d2f2ff46db82e16dbd75f/icons/cypress.svg"
-            alt="cypress"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.djangoproject.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://cdn.worldvectorlogo.com/logos/django.svg"
-            alt="django"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
-            alt="docker"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://dotnet.microsoft.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg"
-            alt="dotnet"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://expressjs.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
-            alt="express"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
-            alt="figma"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
-            alt="firebase"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://flask.palletsprojects.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg"
-            alt="flask"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.framer.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/framer/framer-icon.svg"
-            alt="framer"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://cloud.google.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
-            alt="gcp"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-            alt="git"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://golang.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg"
-            alt="go"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://grafana.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg"
-            alt="grafana"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://graphql.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
-            alt="graphql"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://heroku.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"
-            alt="heroku"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-            alt="html5"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://gohugo.io/" target="_blank" rel="noreferrer">
-          <img
-            src="https://api.iconify.design/logos-hugo.svg"
-            alt="hugo"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.adobe.com/in/products/illustrator.html"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg"
-            alt="illustrator"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.java.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-            alt="java"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-            alt="javascript"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.jenkins.io" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg"
-            alt="jenkins"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://karma-runner.github.io/latest/index.html"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/karma.svg"
-            alt="karma"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://kubernetes.io" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg"
-            alt="kubernetes"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.linux.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
-            alt="linux"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://mariadb.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg"
-            alt="mariadb"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://mochajs.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/mochajs/mochajs-icon.svg"
-            alt="mocha"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
-            alt="mongodb"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.microsoft.com/en-us/sql-server"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
-            alt="mssql"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-            alt="mysql"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://nestjs.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg"
-            alt="nestjs"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
-            alt="nextjs"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.nginx.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg"
-            alt="nginx"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-            alt="nodejs"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://nuxtjs.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-icon.svg"
-            alt="nuxtjs"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.oracle.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg"
-            alt="oracle"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg"
-            alt="photoshop"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.php.net" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
-            alt="php"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://postman.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-            alt="postman"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://pugjs.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://cdn.worldvectorlogo.com/logos/pug.svg"
-            alt="pug"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://github.com/puppeteer/puppeteer"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://www.vectorlogo.zone/logos/pptrdev/pptrdev-official.svg"
-            alt="puppeteer"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.python.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-            alt="python"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg"
-            alt="rabbitMQ"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-            alt="react"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://reactnative.dev/" target="_blank" rel="noreferrer">
-          <img
-            src="https://reactnative.dev/img/header_logo.svg"
-            alt="reactnative"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://realm.io/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/bestofjs/bestofjs-webui/8665e8c267a0215f3159df28b33c365198101df5/public/logos/realm.svg"
-            alt="realm"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://redis.io" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg"
-            alt="redis"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://redux.js.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
-            alt="redux"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.ruby-lang.org/en/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg"
-            alt="ruby"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg"
-            alt="rust"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://sass-lang.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-            alt="sass"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.sketch.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg"
-            alt="sketch"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://spring.io/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"
-            alt="spring"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg"
-            alt="sqlite"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://developer.apple.com/swift/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg"
-            alt="swift"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-            alt="tailwind"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg"
-            alt="tensorflow"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.typescriptlang.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-            alt="typescript"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://unrealengine.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg"
-            alt="unreal"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-            alt="vuejs"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://vuepress.vuejs.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/AliasIO/wappalyzer/master/src/drivers/webextension/images/icons/VuePress.svg"
-            alt="vuepress"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://vuetifyjs.com/en/" target="_blank" rel="noreferrer">
-          <img
-            src="https://bestofjs.org/logos/vuetify.svg"
-            alt="vuetify"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://webpack.js.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg"
-            alt="webpack"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.adobe.com/products/xd.html"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://cdn.worldvectorlogo.com/logos/adobe-xd.svg"
-            alt="xd"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://zapier.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg"
-            alt="zapier"
-            width="40"
-            height="40"
-          />
-        </a>
-      </p>
-    </p>
+      .hero-button {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        border: none;
+        /* Removed background-color property for the hero-button class */
+        color: #007bff;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 0.3rem;
+        transition: background-color 0.3s ease;
+      }
 
-    <p>
-      <img
-        align="centre"
-        src="https://github-readme-stats.vercel.app/api/top-langs?username=noxitb&theme=dark&show_icons=true&locale=en&layout=compact"
-        alt="noxitb"
-      />
-    </p>
+      .hero-button:hover {
+        /* Removed background-color property for the hero-button:hover class */
+        color: #007bff;
+      }
 
-    <p align="centre">
-      <a href="https://github.com/ryo-ma/github-profile-trophy"
-        ><img
-          src="https://github-profile-trophy.vercel.app/?username=noxitb&theme=onedark"
-          alt="noxitb"
-        /></a
-      >
-    </p>
+      /* Add styling for other sections as needed */
+      .about,
+      .highlights,
+      .connect {
+        margin: 4rem auto;
+        padding: 2rem;
+        max-width: 800px;
+        background-color: #f5f5f5;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    <p>
-      <img
-        align="centre"
-        src="https://github-readme-stats.vercel.app/api?username=noxitb&theme=dark&show_icons=true&locale=en"
-        alt="noxitb"
-      />
-    </p>
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
 
-    <p>
-      <img
-        align="centre"
-        src="https://github-readme-streak-stats.herokuapp.com/?user=noxitb&theme=dark"
-        alt="noxitb"
-      />
-    </p>
+      ul {
+        list-style: disc;
+        padding-left: 2rem;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </body>
 </html>
