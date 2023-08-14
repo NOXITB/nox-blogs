@@ -1,12 +1,8 @@
-Absolutely, here's a guide about the coding language Astro, using Markdown format:
-
 ---
-
-title: 'Introduction to Astro Programming Language'
-description: 'A guide to the modern web framework'
-pubDate: 'Aug 15 2023'
-heroImage: '/astro-programming.jpg'
-
+title: "Introduction to Astro Programming Language"
+description: "A guide to the modern web framework"
+pubDate: "Aug 15 2023"
+heroImage: "/astro-programming.jpg"
 ---
 
 # Introduction to Astro Programming Language
