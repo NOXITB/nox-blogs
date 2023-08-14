@@ -1,6 +1,5 @@
 ---
-import '../styles/fonts.css'
-import '../styles/global.css'
+import "../styles/global.css";
 
 export interface Props {
   title: string;
@@ -9,14 +8,13 @@ export interface Props {
 }
 
 const { title, description, permalink } = Astro.props;
-const socialUrl = Astro.site.href + 'assets/social.png'
+const socialUrl = Astro.site.href + "assets/social.png";
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -40,10 +38,13 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <!-- This is intentionally inlined to avoid FOUC -->
 <script>
   const root = document.documentElement;
-  const theme = localStorage.getItem('theme');
-  if (theme === 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    root.classList.add('theme-dark');
+  const theme = localStorage.getItem("theme");
+  if (
+    theme === "dark" ||
+    (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    root.classList.add("theme-dark");
   } else {
-    root.classList.remove('theme-dark');
+    root.classList.remove("theme-dark");
   }
 </script>
