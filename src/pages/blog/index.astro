@@ -15,6 +15,13 @@ const posts = (await getCollection("blog")).sort(
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={title} description={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={heroImage} />
+    <meta property="og:image:width" content="1020" />
+    <meta property="og:image:height" content="510" />
+    <meta property="og:type" content="article" />
     <style>
       body {
         color: white;
