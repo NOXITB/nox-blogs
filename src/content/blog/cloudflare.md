@@ -2,7 +2,7 @@
 title: "Getting Started with Cloudflare Pages and Workers"
 description: "A guide to deploying websites and APIs"
 pubDate: "Aug 14 2023"
-heroImage: "/cloudflare-pages-workers.jpg"
+heroImage: "/blog-placeholder-1.jpg"
 ---
 
 # Getting Started with Cloudflare Pages and Workers
