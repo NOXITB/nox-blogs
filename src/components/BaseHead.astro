@@ -6,12 +6,16 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description: string;
+  heroImage?: string; // Change from image to heroImage
   image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, heroImage, image = "/inplace.png" } = Astro.props;
+
+// Choose the image to use based on the presence of heroImage
+const selectedImage = heroImage || image;
 ---
 
 <!-- Global Metadata -->
@@ -43,18 +47,21 @@ const { title, description, heroImage, image = "/inplace.png" } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content={selectedImage} />
+{/* Use selectedImage here */}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content={selectedImage} />
+{/* Use selectedImage here */}
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={image} />
+<meta property="twitter:image" content={selectedImage} />
+{/* Use selectedImage here */}
