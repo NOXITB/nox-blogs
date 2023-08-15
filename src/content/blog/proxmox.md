@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Proxmox Virtual Environment"
 description: "An introduction to Proxmox and its virtualization capabilities"
-pubDate: "Aug 14 2023"
+pubDate: "Aug 15 2023"
 heroImage: "/proxmox.png"
 ---
 
