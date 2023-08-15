@@ -2,7 +2,7 @@
 title: "Understanding How DNS Works"
 description: "A guide to the Domain Name System"
 pubDate: "Aug 14 2023"
-heroImage: "/blog-placeholder-1.jpg"
+heroImage: "/dns.png"
 ---
 
 # Understanding How DNS Works
