@@ -5,8 +5,6 @@ pubDate: "Aug 14 2023"
 heroImage: "/pages.png"
 ---
 
-# Getting Started with Cloudflare Pages and Workers
-
 Cloudflare offers powerful tools for deploying websites and building serverless APIs through **Cloudflare Pages** and **Cloudflare Workers**. This guide will help you understand the basics and get started with these services.
 
 ## 1. Cloudflare Pages
