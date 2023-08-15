@@ -60,10 +60,20 @@ const posts = (await getCollection("blog")).sort(
       li {
         margin: 0;
       }
+      .social-container {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .social-heading {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
       .social-buttons {
         display: flex;
+        justify-content: center;
         gap: 10px;
-        margin-top: 20px;
       }
 
       .social-button {
@@ -74,6 +84,7 @@ const posts = (await getCollection("blog")).sort(
         border-radius: 4px;
         font-size: 1rem;
         cursor: pointer;
+        text-decoration: none;
       }
 
       .social-button:hover {
@@ -118,19 +129,22 @@ const posts = (await getCollection("blog")).sort(
           }
         </ul>
       </section>
-      <div class="social-buttons">
-        <a
-          href="https://www.youtube.com/your-channel-link"
-          class="social-button">YouTube</a
-        >
-        <a href="https://github.com/your-github-link" class="social-button"
-          >GitHub</a
-        >
-        <a href="https://discord.gg/your-discord-link" class="social-button"
-          >Discord</a
-        >
+      <div class="social-container">
+        <h2 class="social-heading">Check out my socials</h2>
+        <div class="social-buttons">
+          <a
+            href="https://www.youtube.com/your-channel-link"
+            class="social-button">YouTube</a
+          >
+          <a href="https://github.com/your-github-link" class="social-button"
+            >GitHub</a
+          >
+          <a href="https://discord.gg/your-discord-link" class="social-button"
+            >Discord</a
+          >
+        </div>
       </div>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>
