@@ -53,12 +53,12 @@ const posts = (await getCollection("blog")).sort(
         list-style-type: none;
         padding: 0;
         margin: 0;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
       }
       li {
-        flex: 0 0 calc(33.33% - 20px);
-        margin: 10px;
+        margin: 0;
       }
     </style>
   </head>
