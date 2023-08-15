@@ -1,7 +1,7 @@
 ---
 title: "Passky: The Lightweight and Secure Password Manager"
 description: "Discover the features and benefits of Passky, the open-source password manager."
-pubDate: "Aug 14 2023"
+pubDate: "Aug 15 2023"
 heroImage: "/passky-hero.png"
 ---
 
