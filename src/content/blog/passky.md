@@ -45,4 +45,4 @@ For those who prefer more control over their data, Passky offers the advantage o
 
 Passky presents a compelling option in the world of password managers. Its blend of simplicity, security, and open-source nature makes it a valuable tool for anyone seeking a streamlined and reliable solution to password management. With its focus on ease of use, data security, and flexibility, Passky empowers users to take control of their digital security effortlessly.
 
-To get started with Passky, visit their [GitHub page](https://github.com/passky/passky) and explore the possibilities that this lightweight and secure password manager has to offer.
+To get started with Passky, visit their [GitHub page](https://github.com/Rabbit-Company/Passky-Server) and explore the possibilities that this lightweight and secure password manager has to offer.
