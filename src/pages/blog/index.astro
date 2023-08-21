@@ -112,8 +112,6 @@ const posts = (await getCollection("blog")).sort(
                   <p class="date">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
-                  <button class="like-button" data-post-id={post.slug}>Like</button>
-                  <span class="like-count">0</span> Likes
                 </a>
               </li>
             ))
@@ -122,36 +120,5 @@ const posts = (await getCollection("blog")).sort(
       </section>
     </main>
     <Footer />
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const likeButtons = document.querySelectorAll('.like-button');
-        likeButtons.forEach(button => {
-          const postId = button.getAttribute('data-post-id');
-          const likeCount = button.nextElementSibling;
-
-          button.addEventListener('click', async () => {
-            try {
-              const response = await fetch('https://your-worker-url.com/worker.js', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ postId }),
-              });
-
-              if (response.ok) {
-                const data = await response.json();
-                likeCount.textContent = data.count;
-              } else {
-                console.error('Error while liking post');
-              }
-            } catch (error) {
-              console.error(error);
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
