@@ -95,36 +95,67 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     </style>
   </head>
 
-  <body>
-    <Header />
-    <main>
-      <article>
-        <div class="hero-image">
-          {
-            heroImage && (
-              <img width={1020} height={510} src={heroImage} alt="" />
-            )
-          }
-        </div>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            <hr />
+<body>
+  <Header />
+  <main>
+    <article>
+      <div class="hero-image">
+        {
+          heroImage && (
+            <img width={1020} height={510} src={heroImage} alt="" />
+          )
+        }
+      </div>
+      <div class="prose">
+        <div class="title">
+          <div class="date">
+            <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <div class="last-updated-on">
+                  Last updated on <FormattedDate date={updatedDate} />
+                </div>
+              )
+            }
           </div>
-          <slot />
+          <h1>{title}</h1>
+          <hr />
         </div>
-      </article>
-    </main>
-    <Footer />
-  </body>
+        <slot />
+        <button class="like-button" data-post-id={Astro.props.slug}>Like</button>
+        <span class="like-count">0</span> Likes
+      </div>
+    </article>
+  </main>
+  <Footer />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const likeButton = document.querySelector('.like-button');
+      const likeCount = document.querySelector('.like-count');
+      const postId = likeButton.getAttribute('data-post-id');
+
+      likeButton.addEventListener('click', async () => {
+        try {
+          const response = await fetch('https://likes.splitgaming101yt.workers.dev/worker.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ postId }),
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            likeCount.textContent = data.count;
+          } else {
+            console.error('Error while liking post');
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      });
+    });
+  </script>
+</body>
 </html>
