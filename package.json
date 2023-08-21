@@ -1,28 +1,18 @@
 {
-  "name": "@example/minimal",
+  "name": "ss",
+  "type": "module",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "@astrojs/image": "^0.4.0",
-    "@astrojs/mdx": "^0.11.0",
-    "@astrojs/react": "^1.1.1",
-    "@astrojs/renderer-react": "^0.4.0",
-    "@astrojs/renderer-svelte": "^0.3.1",
-    "@astrojs/svelte": "^1.0.0",
-    "astro": "^1.1.3",
-    "astro-icon": "^0.5.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.46.0",
-    "svelte": "^3.49.0"
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "lit": "^2.1.1"
+    "@astrojs/mdx": "^0.19.7",
+    "@astrojs/rss": "^2.4.4",
+    "@astrojs/sitemap": "^2.0.1",
+    "astro": "^2.10.7"
   }
 }

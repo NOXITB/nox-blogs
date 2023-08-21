@@ -1,6 +1,6 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-  },
+    "strictNullChecks": true
+  }
 }
