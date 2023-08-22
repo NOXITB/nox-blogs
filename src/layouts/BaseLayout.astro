@@ -1,0 +1,25 @@
+---
+import BaseHead from '@/components/BaseHead.astro'
+import Nav from '@/components/Nav.astro'
+import Footer from '@/components/Footer.astro'
+import type { SiteMetadata } from '@/types'
+
+interface Props extends SiteMetadata {}
+---
+
+<html lang='en'>
+  <head>
+    <BaseHead {...Astro.props} />
+  </head>
+  <body
+    class='flex flex-col min-h-screen px-6 overflow-x-hidden [overflow:overlay] font-serif antialiased bg-gray-100 text-black dark:bg-gray-900 dark:text-white transition-[background-color] duration-300 selection:bg-[#67769660]'
+  >
+    <Nav />
+    <slot name='before-main' />
+    <main class='max-w-2xl mx-auto w-full'>
+      <slot />
+    </main>
+    <slot name='after-main' />
+    <Footer />
+  </body>
+</html>

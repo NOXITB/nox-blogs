@@ -1,5 +1,12 @@
 ---
-import { SEO } from 'config'
+title: Astro Base-Head
+description: A base-head component of the astro layout.
+---
+
+A base-head component that includes Open Graph meta tags, CSS files and theme detect script for Tailwind CSS.
+
+```astro title="BaseHead.astro" showLineNumbers
+---
 import inter from '@fontsource/inter/files/inter-latin-400-normal.woff2'
 import firacode from '@fontsource/fira-code/files/fira-code-latin-400-normal.woff2'
 import '@fontsource/inter'
@@ -22,20 +29,20 @@ const canonicalURL = new URL(Astro.url).href
 
 <meta name='title' content={title} />
 <meta name='description' content={description} />
-<meta name='author' content={SEO.author} />
+<meta name='author' content='NekoChan' />
 <meta name='robots' content='index, follow' />
 <meta name='generator' content={Astro.generator} />
 
-<meta property='og:site_name' content={SEO.title} />
+<meta property='og:site_name' content='NekoChan’s Blog' />
 <meta property='og:type' content='website' />
 <meta property='og:url' content={canonicalURL} />
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
-<meta property='og:locale' content={SEO.locale} />
+<meta property='og:locale' content='en_US' />
 
 <meta name='twitter:card' content='summary' />
-<meta name='twitter:site' content={SEO.twitter.site} />
-<meta name='twitter:creator' content={SEO.twitter.creator} />
+<meta name='twitter:site' content='@neko_chan_0122' />
+<meta name='twitter:creator' content='@neko_chan_0122' />
 <meta property='twitter:url' content={canonicalURL} />
 <meta property='twitter:title' content={title} />
 <meta property='twitter:description' content={description} />
@@ -57,3 +64,5 @@ const canonicalURL = new URL(Astro.url).href
 
 <link rel='preload' as='font' href={inter} type='font/woff2' crossorigin='anonymous' />
 <link rel='preload' as='font' href={firacode} type='font/woff2' crossorigin='anonymous' />
+
+```

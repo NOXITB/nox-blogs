@@ -1,0 +1,39 @@
+---
+import { SEO } from 'config'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import TagCard from '@/components/TagCard.astro'
+import type { Frontmatter, SiteMetadata } from '@/types'
+
+const metadata: SiteMetadata = {
+  title: SEO.getTitle('Tags'),
+  description: 'All tags of my blog posts.',
+}
+
+const posts = await Astro.glob<Frontmatter>('../blog/*.mdx')
+const nonDraftPosts = posts.filter(({ frontmatter }) => !frontmatter.draft)
+
+const tags = nonDraftPosts.flatMap(({ frontmatter }) => frontmatter.tags)
+const uniqueTags = [...new Set(tags)]
+
+const getCount = (tag: string) => tags.filter((t) => t === tag).length
+---
+
+<BaseLayout {...metadata}>
+  <div class='mb-10'>
+    <h2 class='mb-4 text-3xl font-bold tracking-tight md:text-5xl'>Tags</h2>
+    <p class='text-gray-600 dark:text-gray-300'>All tags of my blog posts.</p>
+  </div>
+  {
+    uniqueTags.length ? (
+      <ol class='flex flex-wrap gap-x-2 gap-y-2'>
+        {uniqueTags.map((tag) => (
+          <li>
+            <TagCard tag={tag} count={getCount(tag)} />
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <p class='text-gray-600 dark:text-gray-300'>No tags yet.</p>
+    )
+  }
+</BaseLayout>

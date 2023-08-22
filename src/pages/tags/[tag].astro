@@ -1,0 +1,55 @@
+---
+import { SEO } from 'config'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import PostCard from '@/components/PostCard.astro'
+import type { MarkdownLayoutProps } from 'astro'
+import type { Frontmatter, SiteMetadata } from '@/types'
+
+interface Props {
+  count: number
+  posts: MarkdownLayoutProps<Frontmatter>[]
+}
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob<Frontmatter>('../blog/*.mdx')
+  const nonDraftPosts = posts.filter(({ frontmatter }) => !frontmatter.draft)
+
+  const tags = nonDraftPosts.flatMap(({ frontmatter }) => frontmatter.tags)
+  const uniqueTags = [...new Set(tags)]
+
+  const getCount = (tag: string) => tags.filter((t) => t === tag).length
+
+  return uniqueTags.map((tag) => ({
+    params: { tag },
+    props: {
+      count: getCount(tag),
+      posts: nonDraftPosts.filter(({ frontmatter: { tags } }) =>
+        Array.isArray(tags) ? tags.includes(tag) : false
+      ),
+    },
+  }))
+}
+
+const { tag } = Astro.params
+const { count, posts } = Astro.props
+
+const metadata: SiteMetadata = {
+  title: SEO.getTitle(`#${tag}`),
+  description: 'All posts with the tag.',
+}
+---
+
+<BaseLayout {...metadata}>
+  <div class='mb-10'>
+    <h2 class='mb-4 text-3xl font-bold tracking-tight md:text-5xl'>#{tag} ( {count} )</h2>
+  </div>
+  <ol class='space-y-4'>
+    {
+      posts.map(({ frontmatter }) => (
+        <li>
+          <PostCard {...frontmatter} />
+        </li>
+      ))
+    }
+  </ol>
+</BaseLayout>
