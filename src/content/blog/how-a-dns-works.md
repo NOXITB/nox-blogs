@@ -3,6 +3,7 @@ title: "Understanding How DNS Works"
 description: "A guide to the Domain Name System"
 pubDate: "Aug 14 2023"
 heroImage: "/dns.png"
+comments: true
 ---
 
 The Domain Name System (DNS) is a critical component of the internet that enables human-readable domain names to be translated into IP addresses, allowing computers to locate and communicate with each other. This guide will walk you through the basics of how DNS works.
