@@ -2,7 +2,7 @@
 title: "Exploring the World of Computer Science"
 description: "A journey through the diverse realms of computer science"
 pubDate: "Aug 23 2023"
-heroImage: "/computer_science.png"
+heroImage: "/computer-science.png"
 ---
 
 Welcome to the fascinating world of Computer Science! In this blog, we'll embark on a journey through the principal areas of study within this dynamic field, uncovering the marvels and innovations that shape our digital landscape.
