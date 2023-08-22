@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Python Programming"
 description: "A beginner's guide to Python programming language"
-pubDate: "Aug 15 2023"
+pubDate: "Aug 23 2023"
 heroImage: "/python.png"
 ---
 
