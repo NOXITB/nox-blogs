@@ -3,7 +3,7 @@ title: "Passky: The Lightweight and Secure Password Manager"
 description: "Discover the features and benefits of Passky, the open-source password manager."
 pubDate: "Aug 15 2023"
 heroImage: "/passky-hero.png"
-comments: true
+
 ---
 
 In a digital age where security is paramount, managing your passwords has become more crucial than ever. Passky, an open-source password manager, offers a simple yet powerful solution to keep your sensitive information secure. Let's dive into the features and benefits that make Passky stand out from the rest.

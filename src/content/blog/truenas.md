@@ -3,7 +3,7 @@ title: "TrueNAS: Empowering Your Data Storage and Management Needs"
 description: "Exploring the features and benefits of TrueNAS"
 pubDate: "Aug 17 2023"
 heroImage: "/truenas-hero.png"
-comments: true
+
 ---
 
 In the ever-evolving landscape of data storage and management solutions, TrueNAS has emerged as a powerful and versatile platform that caters to a wide range of requirements. Whether you're an individual seeking a reliable backup solution or an enterprise in need of scalable storage, TrueNAS has something to offer. In this blog post, we'll delve into the world of TrueNAS, exploring its features, benefits, and how it can address your data management challenges.
