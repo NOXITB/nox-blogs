@@ -3,7 +3,6 @@ title: "Introduction to Astro Programming Language"
 description: "A guide to the modern web framework"
 pubDate: "Aug 15 2023"
 heroImage: "/astro.png"
-
 ---
 
 Astro is a modern web framework that aims to combine the best features of static site generation and server-rendered frameworks. It's designed to provide excellent performance while maintaining the flexibility of a dynamic web application. This guide will introduce you to the key concepts of the Astro programming language.
