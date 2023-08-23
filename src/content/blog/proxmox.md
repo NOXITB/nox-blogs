@@ -1,9 +1,13 @@
 ---
 title: "Getting Started with Proxmox Virtual Environment"
-description: "An introduction to Proxmox and its virtualization capabilities"
-pubDate: "Aug 15 2023"
-heroImage: "/proxmox.png"
-comments: true
+excerpt: "An introduction to Proxmox and its virtualization capabilities"
+publishDate: "2023-08-15T00:00:00.000Z"
+image: "/proxmox.png"
+category: "technology"
+draft: false
+author: "blake-maxwell"
+tags: ["Proxmox", "virtualization", "containerization", "IT infrastructure"]
+
 ---
 
 Proxmox Virtual Environment is an open-source virtualization platform that combines two powerful technologies: virtualization and containerization. With Proxmox, you can efficiently manage virtual machines and containers in a single, unified interface. Let's explore the basics of Proxmox and its capabilities.

@@ -1,0 +1,65 @@
+---
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar.astro";
+import "@fontsource/inter/variable.css";
+import { checkImageUrl } from "@utils/all";
+import { SEO } from "astro-seo";
+
+export interface Props {
+  title?: string;
+  desc?: string;
+  ogimage?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const { title, desc, ogimage = "/dflt.png" } = Astro.props;
+
+const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
+
+const makeTitle = title
+  ? title + " | " + "Blakes Blog"
+  : "My Personal Blog Website";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/fav.png" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title={makeTitle}
+      description={desc}
+      canonical={canonicalURL}
+      twitter={{
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Blakes Blog - My Personal Blog`,
+          image: resolvedOGImage,
+        },
+        image: {
+          alt: "Website Image",
+        },
+      }}
+    />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+    
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>

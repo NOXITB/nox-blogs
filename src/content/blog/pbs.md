@@ -1,9 +1,12 @@
 ---
 title: "Proxmox Backup Server: Secure and Efficient Data Protection"
-description: "Exploring the features and benefits of Proxmox Backup Server"
-pubDate: "Aug 18 2023"
-heroImage: "/pbs-hero.png"
-comments: true
+excerpt: "Exploring the features and benefits of Proxmox Backup Server"
+publishDate: "2023-08-18T00:00:00.000Z"
+image: "/pbs-hero.png"
+category: "technology"
+draft: false
+author: "blake-maxwell"
+tags: ["Proxmox Backup Server", "data protection", "backup", "IT infrastructure"]
 ---
 
 In the realm of modern IT infrastructure management, data protection is a critical concern. Proxmox Backup Server emerges as a comprehensive solution that addresses the challenges of data backup, recovery, and management. In this blog post, we will delve into the world of Proxmox Backup Server, exploring its features, benefits, and how it can safeguard your valuable data.

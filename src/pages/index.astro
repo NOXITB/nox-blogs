@@ -1,153 +1,41 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
+import Container from "@components/container.astro";
+import Postlist from "@components/postlist.astro";
+import Layout from "@layouts/Layout.astro";
+import { latestPosts } from "@utils/content";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      body {
-        color: white;
-        background-color: #111827;
-        margin: 0;
-        font-family: Arial, sans-serif;
-      }
-      a {
-        color: white;
-        text-decoration: underline;
-      }
-      a:hover {
-        color: #6ee7b7;
-      }
-      main {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px;
-      }
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-      p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-        line-height: 1.6;
-      }
-      code {
-        background-color: #1d2d3f;
-        color: white;
-        padding: 2px 4px;
-        border-radius: 4px;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-      li {
-        margin: 0;
-      }
-      .social-container {
-        text-align: center;
-        margin-top: 40px;
-      }
-
-      .social-heading {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-      }
-
-      .social-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-      }
-
-      .social-button {
-        padding: 10px 20px;
-        background-color: #6ee7b7;
-        color: #111827;
-        border: none;
-        border-radius: 4px;
-        font-size: 1rem;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
-      .social-button:hover {
-        background-color: #48c7a1;
-      }
-    </style>
-  </head>
-  <body>
-    <Header title={SITE_TITLE} />
-    <main>
-      <h1>🧑‍💻 Welcome to My Coding World!</h1>
-      <p>
+<Layout title="">
+  <Container>
+    <main class="mt-10 p-4 lg:mt-0 lg:p-0 lg:col-span-2">
+      <h1 class="text-3xl font-semibold mb-4">🧑‍💻 Welcome to My Coding World!</h1>
+      <p class="mb-4">
         Hey there! I'm Blake, and I'm absolutely passionate about coding,
         servers, and homelabs. I'm a developer and support staff member at
         Rabbit Company, where I get to dive into code and keep servers running
         smoothly.
       </p>
-      <p>
+      <p class="mb-4">
         My coding journey spans across various languages, and I've mastered the
         art of debugging servers to ensure everything runs like a charm.
       </p>
-      <p>
+      <p class="mb-4">
         Join me as I share my experiences, projects, and insights into the world
         of coding and technology.
       </p>
-
-      <section>
-        <h2>Recent Blog Posts</h2>
-        <ul>
-          {
-            posts.slice(0, 3).map((post) => (
-              <li>
-                <a href={`/blog/${post.slug}/`}>
-                  <img
-                    width={720}
-                    height={360}
-                    src={post.data.heroImage}
-                    alt=""
-                  />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-      <div class="social-container">
-        <h2 class="social-heading">Check out my socials</h2>
-        <div class="social-buttons">
-          <a
-            href="https://www.youtube.com/channel/UCbAf_psqFnOUVQ-CdyXnwXg"
-            class="social-button">YouTube</a
-          >
-          <a href="https://github.com/NOXITB" class="social-button">GitHub</a>
-          <a href="https://discord.gg/RvW5UCEer3" class="social-button"
-            >Discord</a
-          >
-        </div>
-      </div>
-      <Footer />
     </main>
-  </body>
-</html>
+    
+    <!-- Display the newest 4 posts -->
+    <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
+      {
+        latestPosts
+          .slice(0, 4) // Display the newest 4 posts
+          .map((post) => (
+            <Postlist post={post} aspect="landscape" preloadImage={true} />
+          ))
+      }
+    </div>
+  </Container>
+</Layout>

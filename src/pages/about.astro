@@ -1,45 +1,37 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import { authors } from "@data/authors";
+import Pagetitle from "@components/pagetitle.astro";
+import Link from "@components/ui/link.astro";
 ---
 
-<Layout
-  title="About Me"
-  description="Get to know Blake - A coding enthusiast, server guru, and tech explorer."
-  pubDate={new Date("August 15, 2023")}
-  heroImage="/about-me-hero.jpg"
->
-  <p>
-    Hey there, I'm Blake! 🚀 I'm fueled by a deep passion for coding, servers,
-    and homelabs. Currently, I'm proudly wearing multiple hats at Rabbit
-    Company: a dedicated developer and a reliable support staff member.
-  </p>
+<Layout title="About">
+  <Container>
+    <Pagetitle>
+      <Fragment slot="title">About</Fragment>
+      <Fragment slot="desc">Hey there, I'm Blake! 🚀</Fragment>
+    </Pagetitle>
 
-  <p>
-    My coding journey has introduced me to a diverse array of programming
-    languages, empowering me to tackle complex challenges and bring ideas to
-    life through elegant code. Debugging servers isn't just a task, but an art
-    that I've mastered, ensuring that the digital infrastructure runs
-    seamlessly.
-  </p>
-
-  <p>
-    Beyond the lines of code and server rooms, I thrive on exploration. Whether
-    it's diving into web app development, embracing the intricacies of
-    algorithms, or staying ahead with emerging technologies, I'm constantly
-    curious and eager to learn.
-  </p>
-
-  <p>
-    This space is dedicated to sharing my coding escapades, innovative projects,
-    and insights into the ever-evolving tech landscape. I invite you to join me
-    on this exciting journey, as I unravel the magic behind lines of code and
-    the wonders of digital landscapes.
-  </p>
-
-  <p>
-    When I'm not busy with tech endeavors, you can find me enjoying the great
-    outdoors, sipping on a cup of coffee, or indulging in a good book. Feel free
-    to connect with me on my social channels – let's learn, create, and innovate
-    together!
-  </p>
+    <div class="mx-auto max-w-xl text-center mt-12">
+      <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+        I'm fueled by a deep passion for coding, servers, and homelabs. Currently, I'm proudly wearing multiple hats at Rabbit Company: a dedicated developer and a reliable support staff member.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+        My coding journey has introduced me to a diverse array of programming languages, empowering me to tackle complex challenges and bring ideas to life through elegant code. Debugging servers isn't just a task, but an art that I've mastered, ensuring that the digital infrastructure runs seamlessly.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+        Beyond the lines of code and server rooms, I thrive on exploration. Whether it's diving into web app development, embracing the intricacies of algorithms, or staying ahead with emerging technologies, I'm constantly curious and eager to learn.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+        This space is dedicated to sharing my coding escapades, innovative projects, and insights into the ever-evolving tech landscape. I invite you to join me on this exciting journey, as I unravel the magic behind lines of code and the wonders of digital landscapes.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+        When I'm not busy with tech endeavors, you can find me enjoying the great outdoors, sipping on a cup of coffee, or indulging in a good book. Feel free to connect with me on my social channels – let's learn, create, and innovate together!
+      </p>
+      <div class="mt-8">
+        <Link href="/contact" style="primary">Get in touch</Link>
+      </div>
+    </div>
+  </Container>
 </Layout>
