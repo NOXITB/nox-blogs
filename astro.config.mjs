@@ -1,11 +1,11 @@
 // https://astro.build/config
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import { remarkReadingTime } from "./src/utils/all";
 import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
+import { remarkReadingTime } from "./src/utils/all";
 
 // https://astro.build/config
 export default defineConfig({
