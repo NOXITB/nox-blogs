@@ -1,16 +1,16 @@
 ---
 import { Image, Picture } from "@astrojs/image/components";
-import Authorcard from "@components/authorcard.astro";
-import Container from "@components/container.astro";
-import Label from "@components/ui/label.astro";
-import { authors } from "@data/authors";
-import { categories } from "@data/category";
-import Layout from "@layouts/Layout.astro";
-import { getFormattedDate } from "@utils/all";
+import Authorcard from "../../components/authorcard.astro";
+import Container from "../../components/container.astro";
+import Label from "../../components/ui/label.astro";
+import { authors } from "../../data/authors";
+import { categories } from "../../data/category";
+import Layout from "../../layouts/Layout.astro";
+import { getFormattedDate } from "../../utils/all";
 import { CollectionEntry, getCollection } from "astro:content";
 
-import type { Author } from "@data/authors";
-import type { Category } from "@data/category";
+import type { Author } from "../../data/authors";
+import type { Category } from "../../data/category";
 
 type Props = CollectionEntry<"blog">;
 
