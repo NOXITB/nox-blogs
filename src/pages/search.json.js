@@ -17,7 +17,8 @@ async function getPosts() {
     slug: post.slug,
     title: post.data.title,
     description: post.data.excerpt,
-    date: post.data.publishDate, // Assuming you want to use publishDate
+    date: post.data.publishDate,
+    category: post.data.category 
   }));
 }
 

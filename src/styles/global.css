@@ -198,3 +198,47 @@ input[name="theme-toggle"] {
   left: 0;
   z-index: -1;
 }
+
+/* Custom CSS for Search Bar */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em auto; /* Adjust the margin as needed to center the search bar vertically */
+  max-width: 400px; /* Adjust the maximum width as needed */
+  text-align: center;
+}
+
+.search-container label {
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: var(--text-main);
+}
+
+.search-container span {
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+}
+
+#search {
+  padding: 0.5em 1em;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px; /* Adjust the maximum width as needed */
+}
+
+#search::placeholder {
+  color: var(--text-secondary);
+}
+
+#search:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Center the search results */
+#searchResults {
+  text-align: left;
+}

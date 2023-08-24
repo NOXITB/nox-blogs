@@ -1,20 +1,26 @@
 <aside>
-    <form class="form">
-      <div>
-        <label for="search">Search the Blog</label>
-        <span>Enter a search term or phrase to search the blog.</span>
-      </div>
-      <input
-        type="search"
-        required
-        min="2"
-        max="24"
-        name="search"
-        id="search"
-        placeholder="Enter a search term…"
-      />
-    </form>
-  </aside>
+  <form class=" p-4 rounded-lg shadow-md">
+    <div>
+      <label for="search" class="text-lg font-semibold">
+        Search the Blog
+      </label>
+      <span class="text-sm ">
+        Enter a search term or phrase to search the blog.
+      </span>
+    </div>
+    <input
+      type="search"
+      required
+      min="2"
+      max="24"
+      name="search"
+      id="search"
+      placeholder="Enter a search term…"
+      class="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+    />
+  </form>
+</aside>
+
   
   <script>
     import DOMPurify from "dompurify";
