@@ -3,13 +3,27 @@ import Container from "../components/container.astro";
 import Postlist from "../components/postlist.astro";
 import Layout from "../layouts/Layout.astro";
 import { latestPosts } from "../utils/content";
-
-
+import { categories } from "../data/category"; // Import your categories data
 ---
-
 <Layout title="">
-  <Container>
-    <main class="mt-10 p-4 lg:mt-0 lg:p-0 lg:col-span-2">
+  <Container class="flex">
+    <aside class="w-1/4 p-4">
+      <h2 class="text-xl font-semibold">Categories</h2>
+      <ul class="space-y-2">
+        {categories.map((category) => (
+          <li key={category.slug}>
+            <a
+              href={`/category/${category.slug}`} // Replace with your actual category URL
+              class={`text-${category.color} hover:underline`}
+            >
+              {category.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+    
+    <main class="w-3/4 p-4">
       <h1 class="text-3xl font-semibold mb-4">🧑‍💻 Welcome to My Coding World!</h1>
       <p class="mb-4">
         Hey there! I'm Blake, and I'm absolutely passionate about coding,
@@ -25,17 +39,17 @@ import { latestPosts } from "../utils/content";
         Join me as I share my experiences, projects, and insights into the world
         of coding and technology.
       </p>
+      
+      <!-- Display the newest 4 posts -->
+      <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
+        {
+          latestPosts
+            .slice(0, 4) // Display the newest 4 posts
+            .map((post) => (
+              <Postlist post={post} aspect="landscape" preloadImage={true} />
+            ))
+        }
+      </div>
     </main>
-    
-    <!-- Display the newest 4 posts -->
-    <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
-      {
-        latestPosts
-          .slice(0, 4) // Display the newest 4 posts
-          .map((post) => (
-            <Postlist post={post} aspect="landscape" preloadImage={true} />
-          ))
-      }
-    </div>
   </Container>
 </Layout>

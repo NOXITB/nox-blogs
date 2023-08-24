@@ -2,8 +2,7 @@
 import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { categories } from "../data/category";
-import type { Category } from "../data/category";
+
 
 ---
 
@@ -114,7 +113,7 @@ function generateSearchList(results) {
             <span class="mr-4">Published: ${dateAsDate.toLocaleDateString("en-us", {
               year: "numeric",
               month: "short",
-              day: "numeric",
+              day: "numeric",  
             })}</span>
             <span>Category: ${category}</span>
           </div>

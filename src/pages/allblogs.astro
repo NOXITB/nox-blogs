@@ -4,18 +4,22 @@ import Postlist from "../components/postlist.astro";
 import Layout from "../layouts/Layout.astro";
 import { latestPosts } from "../utils/content";
 import SearchWidget from "../components/SearchWidget.astro";
+import Cat from "../components/cat.astro";
 ---
 <Layout title="All Blogs">
-  <Container>
-    <div class="mb-6"> <!-- Add margin to separate the SearchWidget from posts -->
-      <SearchWidget />
-    </div>
-    <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
-      {latestPosts.map((post) => (
-        <Postlist post={post} aspect="landscape" preloadImage={true} />
-      ))}
-    </div>
+  <Container class="flex">
+    <aside class="w-1/4 p-4">
+      <Cat />
+    </aside>
+    <main class="w-3/4 p-4">
+      <div class="mb-6"> <!-- Add margin to separate the SearchWidget from posts -->
+        <SearchWidget />
+      </div>
+      <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
+        {latestPosts.map((post) => (
+          <Postlist post={post} aspect="landscape" preloadImage={true} />
+        ))}
+      </div>
+    </main>
   </Container>
 </Layout>
-
-

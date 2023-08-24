@@ -1,0 +1,42 @@
+---
+import Container from "../../components/container.astro";
+import Postlist from "../../components/postlist.astro";
+import Layout from "../../layouts/Layout.astro";
+import { latestPosts } from "../../utils/content"; // Change to latestPosts
+import { categories } from "../../data/category";
+
+export const postsForCategory = (categorySlug) => {
+  return latestPosts.filter((post) => post.data.category === categorySlug); // Change to latestPosts
+};
+
+export const getCategoryTitle = (categorySlug) => {
+  const category = categories.find((cat) => cat.slug === categorySlug);
+  return category ? category.title : "";
+};
+
+const { params } = Astro;
+const categorySlug = params.category;
+
+const categoryPosts = postsForCategory(categorySlug);
+const categoryTitle = getCategoryTitle(categorySlug);
+
+export function getStaticPaths() {
+  const paths = categories.map((category) => ({
+    params: { category: category.slug },
+  }));
+
+  return paths; // Return the array of dynamic paths
+}
+
+---
+
+<Layout title={`Category: ${categoryTitle}`}>
+  <Container>
+    <h1 class="text-3xl font-semibold mb-4">{categoryTitle} Category</h1>
+    <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
+      {categoryPosts.map((post) => (
+        <Postlist post={post} aspect="landscape" preloadImage={true} />
+      ))}
+    </div>
+  </Container>
+</Layout>
