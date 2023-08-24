@@ -2,41 +2,49 @@
 import Container from "../../components/container.astro";
 import Postlist from "../../components/postlist.astro";
 import Layout from "../../layouts/Layout.astro";
-import { latestPosts } from "../../utils/content"; // Change to latestPosts
+import { latestPosts } from "../../utils/content";
 import { categories } from "../../data/category";
+import Cat from "../../components/cat.astro";
 
 export const postsForCategory = (categorySlug) => {
-  return latestPosts.filter((post) => post.data.category === categorySlug); // Change to latestPosts
+  return latestPosts.filter((post) => post.data.category === categorySlug);
 };
 
-export const getCategoryTitle = (categorySlug) => {
+export const getCategoryInfo = (categorySlug) => {
   const category = categories.find((cat) => cat.slug === categorySlug);
-  return category ? category.title : "";
+  return category ? category : null;
 };
 
 const { params } = Astro;
 const categorySlug = params.category;
 
 const categoryPosts = postsForCategory(categorySlug);
-const categoryTitle = getCategoryTitle(categorySlug);
+const categoryInfo = getCategoryInfo(categorySlug);
 
 export function getStaticPaths() {
   const paths = categories.map((category) => ({
     params: { category: category.slug },
   }));
 
-  return paths; // Return the array of dynamic paths
+  return paths;
 }
 
 ---
-
-<Layout title={`Category: ${categoryTitle}`}>
-  <Container>
-    <h1 class="text-3xl font-semibold mb-4">{categoryTitle} Category</h1>
-    <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
-      {categoryPosts.map((post) => (
-        <Postlist post={post} aspect="landscape" preloadImage={true} />
-      ))}
-    </div>
+<Layout title={`Category: ${categoryInfo.title}`}>
+  <Container class="flex flex-wrap lg:flex-nowrap">
+    <aside class="w-full lg:w-1/4 p-4">
+      <Cat /> {/* Add the Cat component here */}
+    </aside>
+    <main class="w-full lg:w-3/4 p-4">
+      <div class="mb-8">
+        <h1 class="text-3xl font-semibold">{categoryInfo.title} Category</h1>
+        <p class="mt-2">{categoryInfo.description}</p>
+      </div>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {categoryPosts.map((post) => (
+          <Postlist post={post} aspect="landscape" preloadImage={true} />
+        ))}
+      </div>
+    </main>
   </Container>
 </Layout>

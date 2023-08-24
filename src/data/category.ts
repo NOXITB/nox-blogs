@@ -12,41 +12,34 @@ export const categories: Props[] = [
     slug: "technology",
     color: "blue",
     description:
-      "Keep up with the latest tech trends and learn about the latest innovations in software development, hardware design, cybersecurity, and more.",
+      "Keep pace with the ever-evolving world of technology and delve into the latest advancements in software development, hardware design, cybersecurity, and more.",
   },
   {
-    title: "Internet",
+    title: "Fashion & Lifestyle",
     slug: "internet",
     color: "orange",
     description:
-      "Explore the latest trends and ideas in fashion, food, home design, and more, and get inspiration for living your best life.",
+      "Immerse yourself in the realm of fashion, gastronomy, home aesthetics, and more. Draw inspiration to enrich and elevate your everyday life.",
   },
   {
-    title: "Personal",
+    title: "Personal Development",
     slug: "personal",
     color: "green",
     description:
-      "Discover tips and strategies for self-improvement, personal development, and achieving your goals, and find resources to help you grow as a person.",
+      "Embark on a journey of self-improvement and personal growth. Acquire valuable tips, strategies, and resources to actualize your aspirations and enhance your individuality.",
   },
   {
-    title: "Coding",
+    title: "Coding & Programming",
     slug: "coding",
     color: "pink",
     description:
-      "Plan your next adventure and get travel tips and inspiration from experienced travelers, with articles covering destinations, cultures, and more.",
+      "Unlock the world of coding and programming. Strategize, innovate, and create by diving into articles covering coding techniques, programming paradigms, and more.",
   },
   {
-    title: "Design",
-    slug: "design",
-    color: "purple",
-    description:
-      "Get insights and inspiration from the world of design, with articles covering graphic design, product design, interior design, and more.",
-  },
-  {
-    title: "Homelab",
+    title: "Home Lab & Experimentation",
     slug: "homelab",
     color: "red",
     description:
-      "Plan your next adventure and get travel tips and inspiration from experienced travelers, with articles covering destinations, cultures, and more.",
+      "Embark on thrilling adventures of experimentation and learning. Gather travel tips, stories, and cultural insights from seasoned explorers around the world.",
   },
 ];

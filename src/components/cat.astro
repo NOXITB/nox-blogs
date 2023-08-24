@@ -6,21 +6,28 @@ import { latestPosts } from "../utils/content";
 import { categories } from "../data/category"; // Import your categories data
 ---
 
-<aside class="w-1/4 p-4">
-      <h2 class="text-xl font-semibold">Categories</h2>
-      <ul class="space-y-2">
-        {categories.map((category) => (
-          <li key={category.slug}>
-            <a
-              href={`/category/${category.slug}`} // Replace with your actual category URL
-              class={`text-${category.color} hover:underline`}
-            >
-              {category.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </aside>
+<aside class="w-auto min-w-[200px] p-4">
+  <h2 class="text-xl font-semibold">Categories</h2>
+  <ul class="space-y-2">
+    {categories.map((category) => (
+      <li key={category.slug}>
+        <a
+          href={`/category/${category.slug}`} // Replace with your actual category URL
+          class={`text-${category.color} hover:underline`}
+        >
+          {category.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
+
+
+
+
+
+
+
 
 
 
