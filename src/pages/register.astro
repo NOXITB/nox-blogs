@@ -23,7 +23,10 @@ import Pagetitle from "../components/pagetitle.astro";
               <label for="username" class="sr-only">Username</label>
               <div class="relative rounded-md shadow-sm">
                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                 
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+
                 </div>
                 <input id="username" name="username" type="text" autocomplete="username" required class="tertiaryBackgroundColor tertiaryColor primaryBorderColor appearance-none rounded-t-md block w-full pl-10 px-3 py-2 border focus:outline-none focus:z-10 sm:text-sm" placeholder="Username">
               </div>
@@ -32,7 +35,10 @@ import Pagetitle from "../components/pagetitle.astro";
               <label for="email" class="sr-only">Email</label>
               <div class="relative rounded-md shadow-sm">
                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                 
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
+</svg>
+
                 </div>
                 <input id="email" name="email" type="email" autocomplete="email" required class="tertiaryBackgroundColor tertiaryColor primaryBorderColor appearance-none rounded-none block w-full pl-10 px-3 py-2 border focus:outline-none focus:z-10 sm:text-sm" placeholder="Email">
               </div>
@@ -42,12 +48,19 @@ import Pagetitle from "../components/pagetitle.astro";
               <div class="flex rounded-md shadow-sm">
                 <div class="relative flex flex-grow items-stretch focus-within:z-10">
                   <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+</svg>
+
                   </div>
                   <input id="password" name="password" type="password" autocomplete="off" required class="tertiaryBackgroundColor tertiaryColor primaryBorderColor appearance-none rounded-none block w-full pl-10 px-3 py-2 border focus:outline-none sm:text-sm" placeholder="Password">
                 </div>
                 <button id="password-hider" type="button" class="relative -ml-px inline-flex items-center space-x-2 border tertiaryBackgroundColor tertiaryColor primaryBorderColor px-4 py-2 text-sm font-medium focus:outline-none">
-                
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+
                 </button>
               </div>
             </div>
@@ -76,7 +89,9 @@ import Pagetitle from "../components/pagetitle.astro";
               Sign up
             </button>
             <button id="btn_signin" type="button" class="cancelButton group relative w-full flex justify-center my-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none">
+              
               Sign in
+              
             </button>
           </div>
         </form>

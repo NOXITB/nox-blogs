@@ -5,10 +5,9 @@ import Container from "../components/container.astro";
 import Contactform from "../components/contactform.astro";
 import Pagetitle from "../components/pagetitle.astro";
 ---
-
 <Layout title="Contact">
   <Container>
-
+<link href="https://cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/heroicons.min.css" rel="stylesheet">
     <div class="primaryBackgroundColor min-h-screen flex items-center justify-center py-6 px-4 sm:px-3 lg:px-8">
       <div class="max-w-md w-full space-y-6">
        
@@ -20,7 +19,11 @@ import Pagetitle from "../components/pagetitle.astro";
               <label for="username" class="sr-only">Username</label>
               <div class="relative rounded-md shadow-sm">
                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                
+                  <!-- Username Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+
                 </div>
                 <input id="username" name="username" type="text" autocomplete="username" required class="tertiaryBackgroundColor tertiaryColor primaryBorderColor appearance-none rounded-t-md block w-full pl-10 px-3 py-2 border focus:outline-none focus:z-10 sm:text-sm" placeholder="Username" />
               </div>
@@ -29,7 +32,11 @@ import Pagetitle from "../components/pagetitle.astro";
               <label for="password" class="sr-only">Password</label>
               <div class="relative rounded-md shadow-sm">
                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                  
+                  <!-- Password Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+</svg>
+
                 </div>
                 <input id="password" name="password" type="password" autocomplete="off" required class="tertiaryBackgroundColor tertiaryColor primaryBorderColor appearance-none rounded-b-md block w-full pl-10 px-3 py-2 border focus:outline-none focus:z-10 sm:text-sm" placeholder="Password" />
               </div>
@@ -38,11 +45,22 @@ import Pagetitle from "../components/pagetitle.astro";
 
           <div class="text-center">
             <button id="btn_signin" type="submit" class="primaryButton group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none">
+              <!-- Sign In Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+</svg>
+
               Sign in
             </button>
-            <button id="btn_signup" type="button" class="cancelButton group relative w-full flex justify-center my-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none">
-              Sign up
-            </button>
+      
+      <a href="/register" class="cancelButton group relative w-full flex justify-center my-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none">
+        <!-- Sign Up Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Sign up
+      </a>
+    </div>
           </div>
         </form>
       </div>
