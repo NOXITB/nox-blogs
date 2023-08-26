@@ -1,5 +1,4 @@
 ---
-import Icon from "astro-icon";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import Contactform from "../components/contactform.astro";
@@ -125,3 +124,44 @@ import Pagetitle from "../components/pagetitle.astro";
     </div>
   </Container>
 </Layout>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+import Blake2b from "@rabbit-company/blake2b";
+
+document.getElementById("signup-form").addEventListener("submit", e => {
+	e.preventDefault();
+	register();
+});
+
+function register(){
+	const username = document.getElementById("username").value.toLowerCase();
+	const email = document.getElementById("email").value;
+	const password = document.getElementById("password").value;
+	const turnstile = document.getElementsByName('cf-turnstile-response')[0].value;
+
+	let hash = Blake2b.hash("nox-blog-api-" + username + "-" + password);
+  console.log("Hash: " + hash);
+
+	let headers = new Headers();
+	headers.set('Authorization', 'Basic ' + btoa(username + ':' + hash));
+	headers.set('Content-Type', 'application/json');
+
+	let data = JSON.stringify({ "email": email, "turnstile": turnstile });
+	fetch('https://api.noxcodes.xyz/v1/account', {
+		method: 'POST',
+		headers: headers,
+		body: data
+	}).then(result => {
+		return result.json();
+	}).then(response => {
+    console.log(response);
+		if(response.error !== 0){
+			return;
+		}
+		console.log("Registration Completed");
+	}).catch(() => {
+		console.log("Cannot connect to the server!");
+	});
+}
+</script>
