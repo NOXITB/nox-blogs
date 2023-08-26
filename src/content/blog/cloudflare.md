@@ -3,7 +3,7 @@ title: "Getting Started with Cloudflare Pages and Workers"
 excerpt: "A guide to deploying websites and APIs"
 publishDate: "2023-08-14T00:00:00.000Z"
 image: "/pages.png"
-category: "technology"
+category: "networking"
 draft: false
 author: "blake-maxwell"
 tags: ["Cloudflare", "web deployment", "serverless", "APIs"]

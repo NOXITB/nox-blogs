@@ -3,7 +3,7 @@ title: "Introduction to Astro Programming Language"
 excerpt: "A guide to the modern web framework"
 publishDate: "2023-08-15T00:00:00.000Z"
 image: "/astro.png"
-category: "technology" # Choose from "coding", "servers", "homelab", or "tech-news"
+category: "coding" # Choose from "coding", "servers", "homelab", or "tech-news"
 draft: false
 author: "blake-maxwell"
 tags: ["web-framework", "Astro", "programming", "static-site-generation"]

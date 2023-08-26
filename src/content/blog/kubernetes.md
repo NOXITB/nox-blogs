@@ -3,7 +3,7 @@ title: "Mastering Container Orchestration: A Deep Dive into Kubernetes"
 excerpt: "Demystifying the world of container orchestration"
 publishDate: "2023-08-23T21:20:00.000Z"
 image: "/kubernetes.png"
-category: "technology"
+category: "homelab"
 draft: false
 author: "blake-maxwell"
 tags: ["Kubernetes", "container-orchestration", "Docker", "cloud-native", "microservices"]

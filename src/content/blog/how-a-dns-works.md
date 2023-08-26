@@ -3,7 +3,7 @@ title: "Understanding How DNS Works"
 excerpt: "A guide to the Domain Name System"
 publishDate: "2023-08-14T00:00:00.000Z"
 image: "/dns.png"
-category: "technology"
+category: "networking"
 draft: false
 author: "blake-maxwell"
 tags: ["DNS", "internet", "networking", "domain names"]

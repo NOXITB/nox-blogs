@@ -3,7 +3,7 @@ title: "Introduction to Python Programming"
 excerpt: "A beginner's guide to Python programming language"
 publishDate: "2023-08-23T00:00:00.000Z"
 image: "/python.png"
-category: "technology"
+category: "coding"
 draft: false
 author: "blake-maxwell"
 tags: ["coding"]

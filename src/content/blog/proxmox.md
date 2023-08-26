@@ -3,7 +3,7 @@ title: "Getting Started with Proxmox Virtual Environment"
 excerpt: "An introduction to Proxmox and its virtualization capabilities"
 publishDate: "2023-08-15T00:00:00.000Z"
 image: "/proxmox.png"
-category: "technology"
+category: "homelab"
 draft: false
 author: "blake-maxwell"
 tags: ["Proxmox", "virtualization", "containerization", "IT infrastructure"]

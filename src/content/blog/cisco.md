@@ -3,7 +3,7 @@ title: "Introduction to Cisco Networking"
 excerpt: "A beginner's guide to networking with Cisco equipment"
 publishDate: "2023-08-23T00:00:00.000Z"
 image: "/cisco_network.avif"
-category: "technology"
+category: "networking"
 draft: false
 author: "blake-maxwell"
 tags: ["networking"]

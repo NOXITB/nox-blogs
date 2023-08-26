@@ -3,7 +3,7 @@ title: "TrueNAS: Empowering Your Data Storage and Management Needs"
 excerpt: "Exploring the features and benefits of TrueNAS"
 publishDate: "2023-08-17T00:00:00.000Z"
 image: "/truenas-hero.png"
-category: "technology"
+category: "homelab"
 draft: false
 author: "blake-maxwell"
 tags: ["TrueNAS", "data storage", "data management", "ZFS"]

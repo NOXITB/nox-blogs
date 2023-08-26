@@ -15,14 +15,7 @@ export const categories: Props[] = [
       "Keep pace with the ever-evolving world of technology and delve into the latest advancements in software development, hardware design, cybersecurity, and more.",
   },
   {
-    title: "Fashion & Lifestyle",
-    slug: "internet",
-    color: "orange",
-    description:
-      "Immerse yourself in the realm of fashion, gastronomy, home aesthetics, and more. Draw inspiration to enrich and elevate your everyday life.",
-  },
-  {
-    title: "Personal Development",
+    title: "Personal",
     slug: "personal",
     color: "green",
     description:
@@ -36,10 +29,17 @@ export const categories: Props[] = [
       "Unlock the world of coding and programming. Strategize, innovate, and create by diving into articles covering coding techniques, programming paradigms, and more.",
   },
   {
-    title: "Home Lab & Experimentation",
+    title: "Home Lab",
     slug: "homelab",
     color: "red",
     description:
       "Embark on thrilling adventures of experimentation and learning. Gather travel tips, stories, and cultural insights from seasoned explorers around the world.",
   },
+  {
+    title: "Networking & Web",
+    slug: "networking",
+    color: "orange",
+    description:
+      "Join us on a fun journey to discover how the internet and websites work. Learn from experts about connecting computers and making the webpages you love to visit!",
+}
 ];

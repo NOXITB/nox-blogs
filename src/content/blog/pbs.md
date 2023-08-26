@@ -3,7 +3,7 @@ title: "Proxmox Backup Server: Secure and Efficient Data Protection"
 excerpt: "Exploring the features and benefits of Proxmox Backup Server"
 publishDate: "2023-08-18T00:00:00.000Z"
 image: "/pbs-hero.png"
-category: "technology"
+category: "homelab"
 draft: false
 author: "blake-maxwell"
 tags: ["Proxmox Backup Server", "data protection", "backup", "IT infrastructure"]
