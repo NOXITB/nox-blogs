@@ -41,5 +41,12 @@ export const categories: Props[] = [
     color: "orange",
     description:
       "Join us on a fun journey to discover how the internet and websites work. Learn from experts about connecting computers and making the webpages you love to visit!",
+  },
+  {
+    title: "Tech News",
+    slug: "tech",
+    color: "purple",
+    description:
+      "Join us on a fun journey to discover how the internet and websites work. Learn from experts about connecting computers and making the webpages you love to visit!",
 }
 ];

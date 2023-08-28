@@ -134,7 +134,7 @@ function login(){
 	Utils.changeDialog(2, 'Signing in...');
 	Utils.show('dialog');
 
-	let hash = Blake2b.hash("rabbitserverlist-" + username + "-" + password);
+	let hash = Blake2b.hash("nox-blog-api-" + username + "-" + password);
 
 	let headers = new Headers();
 	headers.set('Authorization', 'Basic ' + btoa(username + ':' + hash));
@@ -154,7 +154,7 @@ function login(){
 		localStorage.setItem('username', username);
 		localStorage.setItem('token', response.token);
 		localStorage.setItem('logged', new Date().toISOString());
-		window.location.href = "panel.html";
+		window.location.href = "/";
 	}).catch(() => {
 		Utils.changeDialog(1, Errors.get(1009));
 		Utils.show('dialog');
