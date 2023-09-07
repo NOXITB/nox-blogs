@@ -12,7 +12,7 @@ export const getFormattedDate = (date) =>
     : "";
 
 /** Estimated Reading time */
-export function remarkReadingTime() {
+ export function remarkReadingTime() {
   return function (tree, { data }) {
     const textOnPage = toString(tree);
     const readingTime = getReadingTime(textOnPage);
