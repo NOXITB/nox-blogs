@@ -20,7 +20,11 @@ const { title, excerpt, desc, ogimage = "/inplace.png" } = Astro.props;
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
 const makeTitle = title
-  ? title + " | " + "Blakes Blog"
+  ? title
+  : "My Personal Blog Website";
+
+const makedecs = excerpt
+  ? excerpt
   : "My Personal Blog Website";
 ---
 
@@ -47,18 +51,13 @@ const makeTitle = title
           url: canonicalURL,
           type: "website",
           title: makeTitle,
+          description: makedecs,
           image: resolvedOGImage,
         },
         image: {
           alt: "Website Image",
         },
       }}
-    />
-    <meta
-      property="og:description"
-      content={plainify(
-        excerpt ? excerpt : undefined,
-      )}
     />
   </head>
   <body>
