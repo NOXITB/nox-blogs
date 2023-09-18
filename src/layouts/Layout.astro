@@ -24,7 +24,9 @@ const makeTitle = title
   ? title
   : "My Personal Blog Website";
 
-const makedecs = excerpt || "My Personal Blog Website";
+const makedesc = excerpt
+  ? excerpt
+  : "My Personal Blog Website";
 ---
 
 <!DOCTYPE html>
@@ -56,7 +58,7 @@ const makedecs = excerpt || "My Personal Blog Website";
           alt: "Website Image",
         },
         optional: {
-          description: makedecs,
+          description: makedesc,
         }
       }}
     />
