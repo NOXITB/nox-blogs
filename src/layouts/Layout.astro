@@ -50,12 +50,14 @@ const makedecs = excerpt || "My Personal Blog Website";
           url: canonicalURL,
           type: "website",
           title: makeTitle,
-          description: description,
           image: resolvedOGImage,
         },
         image: {
           alt: "Website Image",
         },
+        optional: {
+          description: makedecs,
+        }
       }}
     />
 
