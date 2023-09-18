@@ -8,11 +8,7 @@ import Cat from "../components/cat.astro";
 ---
 <Layout title="">
   <Container class="flex">
-    <aside class="w-full sm:w-1/4 p-4">
-      <Cat />
-    </aside>
-    
-    <main class="w-3/4 p-4">
+    <main class="w-full sm:w-3/4 p-4"> {/* Updated width for small screens */}
       <h1 class="text-3xl font-semibold mb-4">🧑‍💻 Welcome to My Coding World!</h1>
       <p class="mb-4">
         Hey there! I'm Blake, and I'm absolutely passionate about coding,
@@ -28,18 +24,35 @@ import Cat from "../components/cat.astro";
         Join me as I share my experiences, projects, and insights into the world
         of coding and technology.
       </p>
-      
+      <!-- Categories for small/mobile devices -->
+  <div class="sm:hidden p-4 mt-4 ml-auto w-full max-w-xs"> {/* Hide on screens larger than sm (mobile) */}
+    <h2 class="text-xl font-semibold">Categories</h2>
+    <div>
+      {categories.map((category) => (
+        <a
+          key={category.slug}
+          href={`/category/${category.slug}`} // Replace with your actual category URL
+          class={`text-${category.color} hover:underline block py-2`}
+        >
+          {category.title}
+        </a>
+      ))}
+    </div>
+  </div>
       <!-- Display the newest 4 posts -->
       <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
-        
-        {
-          latestPosts
-            .slice(0, 4) // Display the newest 4 posts
-            .map((post) => (
-              <Postlist post={post} aspect="landscape" preloadImage={true} />
-            ))
-        }
+        {latestPosts
+          .slice(0, 4) // Display the newest 4 posts
+          .map((post, index) => (
+            <Postlist post={post} aspect="landscape" preloadImage={true} />
+          ))}
       </div>
     </main>
+    
+    <aside class="hidden sm:block sm:w-1/4 p-4 order-first"> {/* Show on screens larger than sm (desktop) */}
+      <Cat />
+    </aside>
   </Container>
+  
+  
 </Layout>

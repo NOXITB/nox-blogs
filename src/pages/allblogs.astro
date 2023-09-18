@@ -3,18 +3,36 @@ import Container from "../components/container.astro";
 import Postlist from "../components/postlist.astro";
 import Layout from "../layouts/Layout.astro";
 import { latestPosts } from "../utils/content";
+import { categories } from "../data/category"; // Import your categories data
 import SearchWidget from "../components/SearchWidget.astro";
 import Cat from "../components/cat.astro";
 ---
 <Layout title="All Blogs">
   <Container class="flex">
-    <aside class="w-1/4 p-4">
+    <aside class="hidden sm:block sm:w-1/4 p-4 order-first"> {/* Show on screens larger than sm (desktop) */}
       <Cat />
     </aside>
-    <main class="w-3/4 p-4">
+    <main class="p-4"> <!-- Remove w-3/4 to make it full width -->
       <div class="mb-6"> <!-- Add margin to separate the SearchWidget from posts -->
         <SearchWidget />
       </div>
+      
+      <!-- Categories for small/mobile devices -->
+      <div class="sm:hidden p-4 mt-4 ml-auto w-full max-w-xs"> {/* Hide on screens larger than sm (mobile) */}
+        <h2 class="text-xl font-semibold">Categories</h2>
+        <div>
+          {categories.map((category) => (
+            <a
+              key={category.slug}
+              href={`/category/${category.slug}`} // Replace with your actual category URL
+              class={`text-${category.color} hover:underline block py-2`}
+            >
+              {category.title}
+            </a>
+          ))}
+        </div>
+      </div>
+      
       <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
         {latestPosts.map((post) => (
           <Postlist post={post} aspect="landscape" preloadImage={true} />

@@ -19,6 +19,14 @@
   --primary-color: #548e9b;
 }
 
+/* Add this CSS to your stylesheet */
+@media (max-width: 767px) {
+  .w-full.sm\:w-1\/4.p-4 {
+    display: none; /* Hide categories on small screens */
+  }
+}
+
+
 @font-face {
   font-family: "Atkinson";
   src: url("/fonts/atkinson-regular.woff") format("woff");
