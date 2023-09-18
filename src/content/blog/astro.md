@@ -6,7 +6,7 @@ image: "/astro.png"
 category: "coding" # Choose from "coding", "servers", "homelab", or "tech-news"
 draft: false
 author: "blake-maxwell"
-tags: ["web-framework", "Astro", "programming", "static-site-generation"]
+tags: ["web-frameworks", "Astro", "programming", "static-site-generation"]
 ---
 
 
