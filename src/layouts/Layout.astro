@@ -11,11 +11,12 @@ export interface Props {
   desc?: string;
   excerpt?: string;
   ogimage?: string;
+  description?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const { title, excerpt, desc, ogimage = "/inplace.png" } = Astro.props;
+const { title, excerpt, desc, description, ogimage = "/inplace.png" } = Astro.props;
 
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
@@ -49,7 +50,7 @@ const makedecs = excerpt || "My Personal Blog Website";
           url: canonicalURL,
           type: "website",
           title: makeTitle,
-          description: makedecs,
+          description: description,
           image: resolvedOGImage,
         },
         image: {
@@ -57,6 +58,8 @@ const makedecs = excerpt || "My Personal Blog Website";
         },
       }}
     />
+
+    <meta property="og:description" content={description} />
   </head>
   <body>
     <Navbar />
