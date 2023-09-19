@@ -8,6 +8,8 @@ import { categories } from "../../data/category";
 import Layout from "../../layouts/Layout.astro";
 import { getFormattedDate } from "../../utils/all";
 import { CollectionEntry, getCollection } from "astro:content";
+import AdComponent from "../../components/AdComponent.astro";
+
 
 import type { Author } from "../../data/authors";
 import type { Category } from "../../data/category";
@@ -104,12 +106,19 @@ const category = categories.find(
         />
       )
     }
+
+
   </div>
+	<AdComponent />
+
+
+
+
 
   <Container>
-    <article class="max-w-screen-md mx-auto">
+    <article class="max-w-screen-lg mx-auto">
       <div
-        class="mx-auto my-3 prose prose-base dark:prose-invert prose-a:text-blue-600">
+        class="mx-auto my-3 prose prose-base dark:prose-invert prose-a:text-blue-600 custom-width">
         <Content />
 
         <div class="flex flex-wrap items-center w-full gap-3 md:w-auto">
@@ -120,9 +129,11 @@ const category = categories.find(
           }
         </div>
       </div>
-<script async src="https://fundingchoicesmessages.google.com/i/pub-1890577455173761?ers=1" nonce="5WddHVWAH0jXWCbNQj-F8A"></script><script nonce="5WddHVWAH0jXWCbNQj-F8A">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
-    
+		<AdComponent />
+
+
    <h2 class="mt-8 mb-4 text-xl font-semibold">Comments</h2>
+	 <AdComponent />
   <script src="https://giscus.app/client.js"
     data-repo="NOXITB/nox-blogs-comments"
     data-repo-id="R_kgDOKKdlIg"

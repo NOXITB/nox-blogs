@@ -19,6 +19,14 @@
   --primary-color: #548e9b;
 }
 
+
+.custom-width {
+  max-width: 80%; /* Set the maximum width to 80% of the container */
+  margin-left: 10%; /* Add a left margin of 10% */
+  margin-right: 10%; /* Add a right margin of 10% */
+}
+
+
 /* Add this CSS to your stylesheet */
 @media (max-width: 767px) {
   .w-full.sm\:w-1\/4.p-4 {

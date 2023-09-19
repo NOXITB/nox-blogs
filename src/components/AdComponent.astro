@@ -1,0 +1,29 @@
+<div class="mt-4 flex justify-center">
+  <div>
+    <script type="text/javascript">
+      // Check the screen width and load the appropriate ad code
+      const adOptions = {
+        small: {
+          key: 'c30c5cd14eb92657737ffd2556369bb6',
+          format: 'iframe',
+          height: 50,
+          width: 320,
+          params: {}
+        },
+        large: {
+          key: 'f80875e48da1c3cf0653a7d4e744cfe8',
+          format: 'iframe',
+          height: 90,
+          width: 728,
+          params: {}
+        }
+      };
+
+      const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      const adSize = screenWidth < 640 ? adOptions.small : adOptions.large;
+
+      atOptions = adSize;
+      document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/' + adSize.key + '/invoke.js"></scr' + 'ipt>');
+    </script>
+  </div>
+</div>
