@@ -16,6 +16,7 @@
     "@astrojs/mdx": "^0.17.0",
     "@astrojs/react": "^2.3.2",
     "@astrojs/sitemap": "^1.0.1",
+    "@astrojs/solid-js": "^3.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@fontsource/inter": "^4.5.14",
     "@rabbit-company/blake2b": "^1.1.0",
@@ -39,6 +40,7 @@
     "react-dom": "^18.2.0",
     "reading-time": "^1.5.0",
     "rehype-plugin-image-native-lazy-loading": "^1.2.0",
+    "solid-js": "^1.7.12",
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {

@@ -7,6 +7,7 @@ category: "coding" # Choose from "coding", "servers", "homelab", or "tech-news"
 draft: false
 author: "blake-maxwell"
 tags: ["web-frameworks", "Astro", "programming", "static-site-generation"]
+
 ---
 
 
@@ -103,3 +104,4 @@ Once built, you can deploy your Astro site to various hosting platforms, includi
 Astro is a versatile web framework that provides the performance benefits of static site generation and the flexibility of server-rendered components. By understanding the basics of Astro and its unique features, you can build efficient and modern web applications that deliver exceptional user experiences.
 
 For more in-depth information and examples, refer to the official Astro documentation and community resources.
+<Adcomponent />

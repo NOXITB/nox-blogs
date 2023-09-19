@@ -8,6 +8,8 @@ import { defineConfig } from "astro/config";
 import { remarkReadingTime } from "./src/utils/all";
 import { astroImageTools } from "astro-imagetools";
 
+import solidJs from "@astrojs/solid-js";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://noxcodes.xyz",
@@ -19,5 +21,5 @@ export default defineConfig({
   integrations: [tailwind(), image({
     integrations: [astroImageTools],
     serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), react()]
+  }), mdx(), sitemap(), react(), solidJs()]
 });
