@@ -30,7 +30,7 @@ export function getStaticPaths() {
 }
 
 ---
-<Layout title={`Category: ${categoryInfo.title}`}>
+<Layout title={`Category: ${categoryInfo.title}`} desc=`${categoryInfo?.description}`>
   <Container class="flex flex-wrap lg:flex-nowrap">
     <aside class="w-full lg:w-1/4 p-4">
       <Cat /> {/* Add the Cat component here */}
