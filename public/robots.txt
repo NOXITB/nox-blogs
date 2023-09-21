@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://noxcodes.xyz/sitemap-index.xml
+Sitemap: https://noxcodes.xyz/sitemap-0.xml
