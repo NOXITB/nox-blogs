@@ -1,0 +1,62 @@
+{
+  "HTML": {
+    "beautifiers": [
+      "Pretty Diff",
+      "JS-Beautify"
+    ],
+    "wrap_line_length": 80,
+    "indent_size": 2,
+    "max_preserve_newlines": 1
+  },
+  "CSS": {
+    "beautifiers": [
+      "Prettier",
+      "Pretty Diff",
+      "JS-Beautify",
+      "CSScomb"
+    ],
+    "indent_style": "space",
+    "wrap_line_length": 80,
+    "indent_size": 2,
+    "max_preserve_newlines": 1
+  },
+  "JavaScript": {
+    "beautifiers": [
+      "Prettier",
+      "Pretty Diff",
+      "JS-Beautify",
+      "ESLint"
+    ],
+    "wrap_line_length": 80,
+    "indent_size": 2,
+    "max_preserve_newlines": 1,
+    "indent_style": "space"
+  },
+  "Markdown": {
+    "beautifiers": [
+      "Prettier"
+    ],
+    "wrap_line_length": 80
+  },
+  "SVG": {
+    "beautifiers": [
+      "Pretty Diff"
+    ],
+    "wrap_line_length": 80,
+    "indent_size": 2,
+    "max_preserve_newlines": 1,
+    "indent_style": "space"
+  },
+  "TypeScript": {
+    "beautifiers": [
+      "Prettier",
+      "Pretty Diff",
+      "TSLint"
+    ],
+    "wrap_line_length": 80,
+    "indent_size": 2,
+    "max_preserve_newlines": 1,
+    "indent_style": "space",
+    "quotes": "single"
+  }
+}
