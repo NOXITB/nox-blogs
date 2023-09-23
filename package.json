@@ -17,7 +17,7 @@
     "@astrojs/react": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/solid-js": "^3.0.1",
-    "@astrojs/tailwind": "^3.0.1",
+    "@astrojs/tailwind": "^5.0.0",
     "@fontsource/inter": "^4.5.14",
     "@rabbit-company/blake2b": "^1.1.0",
     "@rabbit-company/password-entropy": "^1.1.2",
