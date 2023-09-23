@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/alpinejs": "^0.1.3",
     "@astrojs/image": "^0.15.0",
-    "@astrojs/mdx": "^0.17.0",
+    "@astrojs/mdx": "^1.0.0",
     "@astrojs/react": "^2.3.2",
     "@astrojs/sitemap": "^1.0.1",
     "@astrojs/solid-js": "^3.0.1",
