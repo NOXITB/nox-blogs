@@ -15,7 +15,7 @@
     "@astrojs/image": "^0.15.0",
     "@astrojs/mdx": "^0.17.0",
     "@astrojs/react": "^2.3.2",
-    "@astrojs/sitemap": "^1.0.1",
+    "@astrojs/sitemap": "^3.0.0",
     "@astrojs/solid-js": "^3.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@fontsource/inter": "^4.5.14",
