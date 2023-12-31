@@ -8,7 +8,7 @@ import { categories } from "../../data/category";
 import Layout from "../../layouts/Layout.astro";
 import { getFormattedDate } from "../../utils/all";
 import { CollectionEntry, getCollection } from "astro:content";
-import AdComponent from "../../components/AdComponent.astro";
+
 
 
 import type { Author } from "../../data/authors";
@@ -111,8 +111,6 @@ const category = categories.find(
   </div>
 
 
-<AdComponent />
-
 
 
 
@@ -129,10 +127,10 @@ const category = categories.find(
               <span class="text-sm text-gray-500">#{tag}</span>
             ))
           }
-          
+
         </div>
       </div>
-    
+
 
 
    <h2 class="mt-8 mb-4 text-xl font-semibold">Comments</h2>
@@ -151,7 +149,7 @@ const category = categories.find(
     crossorigin="anonymous"
     async>
   </script>
-<AdComponent />
+
 
       <div class="flex justify-center mt-7 mb-7">
         <a
