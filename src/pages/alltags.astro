@@ -1,0 +1,32 @@
+---
+import Container from "../components/container.astro";
+import Layout from "../layouts/Layout.astro";
+import { latestPosts } from "../utils/content";
+---
+<Layout title="All Tags" desc="Explore all tags used in the blog posts">
+  <Container class="flex flex-wrap lg:flex-nowrap">
+    <main class="w-full p-4">
+      <div class="mb-8">
+        <h1 class="text-3xl font-semibold">All Tags</h1>
+        <p class="mt-2">Explore the tags used in the blog posts.</p>
+      </div>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {latestPosts.map((post) => post.data.tags).flat().reduce((uniqueTags, tag) => {
+          if (!uniqueTags.includes(tag)) {
+            uniqueTags.push(tag);
+          }
+          return uniqueTags;
+        }, []).map((tag) => (
+          <div key={tag} class="p-2 border rounded-md">
+            <a
+              href={`/tag/${tag}`} // Replace with your actual tag URL
+              class="text-blue-500 hover:underline"
+            >
+              {tag}
+            </a>
+          </div>
+        ))}
+      </div>
+    </main>
+  </Container>
+</Layout>;
