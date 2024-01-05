@@ -55,3 +55,9 @@ const htmlEntityDecoder = (htmlWithEntities) => {
   );
   return htmlWithoutEntities;
 };
+
+
+class
+.on('resume', (replayed) => {
+	console.log(replayed);
+});
