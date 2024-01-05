@@ -1,10 +1,10 @@
 <aside>
-  <form class=" p-4 rounded-lg shadow-md">
+  <form class="p-4 rounded-lg shadow-md" id="searchForm">
     <div>
       <label for="search" class="text-lg font-semibold">
         Search the Blog
       </label>
-      <span class="text-sm ">
+      <span class="text-sm">
         Enter a search term or phrase to search the blog.
       </span>
     </div>
@@ -19,19 +19,70 @@
       class="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
     />
   </form>
+  <section aria-label="Search Results" id="searchResults"></section>
 </aside>
 
-  
-  <script>
-    import DOMPurify from "dompurify";
-    const form = document.querySelector("form");
-    form?.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const searchTerm = DOMPurify.sanitize(formData.get("search")?.toString());
-      if (!searchTerm || searchTerm.length === 0) return;
-      const url = new URL("/search", window.location.origin);
-      url.searchParams.set("q", searchTerm);
-      window.location.assign(url.toString());
-    });
-  </script>
+<script>
+  import DOMPurify from "dompurify";
+  import Fuse from "fuse.js";
+
+  const form = document.querySelector("#searchForm");
+  const resultsContainer = document.querySelector("#searchResults");
+
+  form?.addEventListener("input", async () => {
+    const formData = new FormData(form);
+    const searchTerm = DOMPurify.sanitize(formData.get("search")?.toString());
+    if (!searchTerm || searchTerm.length < 2) {
+      resultsContainer.innerHTML = ""; // Clear results if the search term is too short
+      return;
+    }
+
+    try {
+      const res = await fetch("/search.json");
+      if (!res.ok) {
+        throw new Error("Something went wrong…please try again");
+      }
+      const data = await res.json();
+      const fuseOptions = {
+        includeScore: true,
+        shouldSort: true,
+        threshold: 0.5,
+        keys: [
+          { name: "title", weight: 1 },
+          { name: "description", weight: 0.75 },
+          { name: "category", weight: 0.5 },
+        ],
+      };
+      const fuseInstance = new Fuse(data, fuseOptions);
+      const searchResult = fuseInstance.search(searchTerm).slice(0, 3); // Display only the top 3 results
+
+      resultsContainer.innerHTML =
+        searchResult.length > 0
+          ? generateSearchList(searchResult)
+          : "No results found…";
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
+  function generateSearchList(results) {
+    return results
+      .map((r) => {
+        const { title, date, slug, category } = r.item;
+        const dateAsDate = new Date(date);
+        return `<div class="border-t border-gray-200 py-4">
+          <div class="text-lg font-semibold mb-1">${title}</div>
+          <div class="text-sm text-gray-500">
+            <span class="mr-4">Published: ${dateAsDate.toLocaleDateString("en-us", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}</span>
+            <span>Category: ${category}</span>
+          </div>
+          <a href="/blog/${slug}/" class="text-blue-500 hover:underline">Read More</a>
+        </div>`;
+      })
+      .join("");
+  }
+</script>
