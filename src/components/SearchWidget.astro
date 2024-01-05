@@ -51,6 +51,10 @@
           { name: "title", weight: 1 },
           { name: "description", weight: 0.75 },
           { name: "category", weight: 0.5 },
+					{
+      name: 'tags', // Include the "tags" field in search
+      weight: 0.25, // Adjust the weight as needed
+    },
         ],
       };
       const fuseInstance = new Fuse(data, fuseOptions);
@@ -68,7 +72,7 @@
   function generateSearchList(results) {
     return results
       .map((r) => {
-        const { title, date, slug, category } = r.item;
+        const { title, date, slug, category, tags } = r.item;
         const dateAsDate = new Date(date);
         return `<div class="border-t border-gray-200 py-4">
           <div class="text-lg font-semibold mb-1">${title}</div>
@@ -79,6 +83,7 @@
               day: "numeric",
             })}</span>
             <span>Category: ${category}</span>
+						<span class="ml-4">Tags: ${tags.join(', ')}</span>
           </div>
           <a href="/blog/${slug}/" class="text-blue-500 hover:underline">Read More</a>
         </div>`;
