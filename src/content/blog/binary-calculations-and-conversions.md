@@ -95,32 +95,7 @@ Decimal 1 ÷ 2 = Quotient 0, Remainder 1
 ```
 
 The process is repeated until the quotient reaches 0, with the remainders recorded in reverse order. Consequently, the binary representation of 13 is deduced as 1101.
-<div class="mt-4 flex justify-center">
-  <div class="hidden lg:block"> <!-- Hide on small devices -->
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'f80875e48da1c3cf0653a7d4e744cfe8',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-      document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/f80875e48da1c3cf0653a7d4e744cfe8/invoke.js"></scr' + 'ipt>');
-    </script>
-  </div>
-  <div class="lg:hidden"> <!-- Hide on large devices -->
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'c30c5cd14eb92657737ffd2556369bb6',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-      document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/c30c5cd14eb92657737ffd2556369bb6/invoke.js"></scr' + 'ipt>');
-    </script>
-  </div>
-</div>
+
 
 ## 4. Binary and Computers
 

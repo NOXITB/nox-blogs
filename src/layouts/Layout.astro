@@ -6,6 +6,7 @@ import { checkImageUrl } from "../utils/all";
 import { SEO } from "astro-seo";
 import { plainify } from "../utils/textc";
 
+
 export interface Props {
   title?: string;
   desc?: string;
@@ -37,7 +38,11 @@ const makedesc = desc
 			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
 			img {
 				content-visibility: auto;
+				background: black;
 			}
+			body {
+    background: black;
+  }
 		</style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1890577455173761"
      crossorigin="anonymous"></script>
