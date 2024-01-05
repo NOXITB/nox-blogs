@@ -3,22 +3,26 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-:root {
-  --background-body: #111827; /* Updated background color */
-  --text-main: white; /* Updated text color */
-  --text-secondary: #6b6f72;
+ :root {
+  --background-body: #333; /* Dark background */
+  --text-main: #fff; /* Light text */
+  --text-secondary: #ccc;
   --primary-color: #548e9b;
   --font-family-serif: Merriweather, serif;
   --font-family-sans: "Fira Sans", sans-serif;
 }
 
 :root.theme-dark {
-  --background-body: #202122;
-  --text-main: #fff;
+  --background-body: #333; /* Dark background */
+  --text-main: #fff; /* Light text */
   --text-secondary: #ccc;
   --primary-color: #548e9b;
 }
 
+.light {
+	--background-color: black;
+	--text-color: white;
+}
 
 .custom-width {
   max-width: 80%; /* Set the maximum width to 80% of the container */
@@ -54,11 +58,11 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
+  background: linear-gradient(var(--black-gradient)) no-repeat;
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: rgb(var(--gray-dark));
+  color: rgb(var(--black-dark));
   font-size: 20px;
   line-height: 1.7;
 }
@@ -126,7 +130,7 @@ img {
 }
 code {
   padding: 2px 5px;
-  background-color: rgb(var(--gray-light));
+  background-color: rgb(var(--black-light));
   border-radius: 2px;
 }
 pre {
@@ -144,7 +148,7 @@ blockquote {
 }
 hr {
   border: none;
-  border-top: 1px solid rgb(var(--gray-light));
+  border-top: 1px solid rgb(var(--black-light));
 }
 @media (max-width: 720px) {
   body {
