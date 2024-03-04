@@ -22,7 +22,7 @@
     "@rabbit-company/blake2b": "^1.1.0",
     "@rabbit-company/password-entropy": "^1.1.2",
     "@types/alpinejs": "^3.7.1",
-    "@types/react": "^18.2.21",
+    "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.7",
     "astro": "^2.0.14",
     "astro-color-scheme": "^1.0.1",
