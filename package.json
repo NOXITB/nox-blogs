@@ -23,7 +23,7 @@
     "@rabbit-company/password-entropy": "^1.1.2",
     "@types/alpinejs": "^3.7.1",
     "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
+    "@types/react-dom": "^18.2.25",
     "astro": "^2.0.14",
     "astro-color-scheme": "^1.0.1",
     "astro-feather-icons": "^1.0.2",
