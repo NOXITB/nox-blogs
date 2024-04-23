@@ -108,25 +108,25 @@ import { categories } from "../data/category";
 
 
 function generateSearchList(results) {
-  return results
-    .map((r) => {
-      const { title, date, slug, category, tags } = r.item; // Include the "tags" field
-      const dateAsDate = new Date(date);
-      return `<li class="border-t border-gray-200 py-4">
-          <div class="text-lg font-semibold mb-1">${title}</div>
-          <div class="text-sm text-gray-500">
-            <span class="mr-4">Published: ${dateAsDate.toLocaleDateString('en-us', {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            })}</span>
-            <span>Category: ${category}</span>
-            <span class="ml-4">Tags: ${tags.join(', ')}</span> <!-- Display tags -->
-          </div>
-          <a href="/blog/${slug}/" class="text-blue-500 hover:underline">Read More</a>
-        </li>`;
-    })
-    .join('');
+	return results
+  .map((r) => {
+    const { title, date, slug, category, tags } = r.item;
+    const dateAsDate = new Date(date);
+    return `<li class="border-t border-gray-200 py-4">
+        <div class="text-lg font-semibold mb-1">${title}</div>
+        <div class="text-sm text-gray-500">
+          <span class="mr-4">Published: ${dateAsDate.toLocaleDateString('en-us', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}</span>
+          <span>Category: ${category}</span>
+          <span class="ml-4">Tags: ${tags.join(', ')}</span>
+        </div>
+        <a href="/blog/${slug}/" class="text-blue-500 hover:underline">Read More</a>
+      </li>`;
+  })
+  .join('');
 }
 
 

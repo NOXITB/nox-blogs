@@ -1,11 +1,10 @@
 import { getCollection } from "astro:content";
 
-export const latestPosts = await getCollection("blog", ({ data }) => {
-  return data.draft !== true;
-});
-
 async function getPosts() {
-  // Use the latestPosts array to avoid fetching the collection again
+  const latestPosts = await getCollection("blog", ({ data }) => {
+    return data.draft !== true;
+  });
+
   return latestPosts.map((post) => ({
     slug: post.slug,
     title: post.data.title,
@@ -15,6 +14,7 @@ async function getPosts() {
     tags: post.data.tags,
   }));
 }
+
 
 export async function get() {
   const posts = await getPosts();
