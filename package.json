@@ -19,7 +19,7 @@
     "@astrojs/solid-js": "^3.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@fontsource/inter": "^4.5.14",
-    "@rabbit-company/blake2b": "^1.1.0",
+    "@rabbit-company/blake2b": "^2.1.0",
     "@rabbit-company/password-entropy": "^1.1.2",
     "@types/alpinejs": "^3.7.1",
     "@types/react": "^18.2.21",
